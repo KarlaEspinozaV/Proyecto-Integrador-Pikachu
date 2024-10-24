@@ -1,0 +1,25 @@
+body {
+  margin: 0; /* Elimina el margen por defecto del body */
+}
+
+#logo_header{
+  height: 3.125rem;
+  width: 3.125rem;
+}
+#imagen_logo{
+  background-color: fuchsia;
+}
+/* nav ul{
+  float: right;
+} */
+
+.container {
+  display: flex;
+  align-items: center;
+}
+.prueba1{
+  width: 200px; /* Ancho del rectángulo */
+  height: 25px; /*Alto del rectángulo */
+  background-color: fuchsia;/* Color de fondo */
+  border: 1px solid red; /* Borde */
+}
