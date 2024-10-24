@@ -1,13 +1,24 @@
 body {
-  margin: 0; /* Elimina el margen por defecto del body */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-#logo_header{
-  height: 3.125rem;
-  width: 3.125rem;
+#logo-header{
+  height: 80px;
+  width: 80px;
 }
-#imagen_logo{
-  background-color: fuchsia;
+
+nav{
+  /* background-color: aqua; */
+  /* height: 100; */
+}
+
+#imagen-logo{
+  /* background-color: fuchsia; */
+  padding: 10px;
 }
 /* nav ul{
   float: right;
@@ -22,4 +33,8 @@ body {
   height: 25px; /*Alto del rectángulo */
   background-color: fuchsia;/* Color de fondo */
   border: 1px solid red; /* Borde */
+}
+
+#element-acerca-nosotros{
+  white-space: nowrap; /* Evita el wrap del texto */
 }
