@@ -11,50 +11,40 @@ body {
   width: 80px;
 }
 
-nav{
-  /* background-color: aqua; */
-  /* height: 100; */
+#main-nav-container{
+  flex-wrap: unset;
+  padding: 0;
 }
-
-#imagen-logo{
-  /* background-color: fuchsia; */
-  padding: 10px;
-}
-/* nav ul{
-  float: right;
-} */
 
 #user-logo{
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 #home-logo{
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 
 #cart-logo{
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
-#search-logo{
-  height: 20px;
-  width: 20px;
-  /* border: none;
-  background: transparent ; */
+
+#element-acerca-nosotros{
+  white-space: nowrap; /* Evita el wrap del texto */
 }
 
 .container {
   display: flex;
   align-items: center;
 }
-.prueba1{
-  width: 200px; /* Ancho del rectángulo */
-  height: 25px; /*Alto del rectángulo */
-  background-color: fuchsia;/* Color de fondo */
-  border: 1px solid red; /* Borde */
+
+.icon-container {
+  display: flex; /* Utiliza flexbox para alinear los íconos */
+  align-items: center; /* Alinea verticalmente los íconos al centro */
+  flex-wrap: nowrap; /* No permite que los íconos se envuelvan a la siguiente línea */
 }
 
-#element-acerca-nosotros{
-  white-space: nowrap; /* Evita el wrap del texto */
+.icon-container svg {
+  margin-right: 10px; /* Agrega un espacio entre cada ícono */
 }
