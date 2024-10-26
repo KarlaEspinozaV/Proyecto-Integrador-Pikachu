@@ -34,7 +34,6 @@ li .nav-link {
 
 #form-search{
   width: 260px;
-  margin-right: 50px;
 
 }
 
@@ -77,22 +76,47 @@ li .nav-link {
 }
 
 #element-acerca-nosotros:hover{
-
   background-color: #FDF270;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
   border-radius: 0.5rem;
 }
 
 .custom-hover:hover {
   background-color: #FDF270;
   color: white;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
   border-radius: 0.5rem;
 }
 
+#all-icon-container-responsive {
+  display: none;
+}
+
+#toggler-brand-icons {
+  display: flex;
+}
 
 @media (width < 1024px){
   #main-nav-container{
+    width: 100% !important;
+  }
+}
+
+@media (width < 1024px){
+  #main-nav-container{
+    width: 100% !important;
+    flex-wrap: wrap;
+  }
+
+  #all-icon-container {
+    display: none;
+  }
+
+  #all-icon-container-responsive {
+    display: flex;
+  }
+
+  #toggler-brand-icons {
     width: 100% !important;
   }
 }
