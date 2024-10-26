@@ -10,60 +10,57 @@
 </head>
 <body>
   <header>
-    <nav id='principal_nav' class="navbar navbar-expand-lg bg-f8f9fa">
-      <div id='main-nav-container'class="container-fluid">
+    <nav id='principal_nav' class="navbar navbar-expand-md bg-f8f9fa">
+      
+        
+        
+        <div id='main-nav-container'class="container-fluid">
+            <a class="navbar-brand d-flex" href="#">
+                <img id='logo-header'src="./image2.png" alt="Descripción"> 
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            
 
-        <div class="container">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- ** -->
-          <div class="d-flex align-items-left">
-            <img id='logo-header'src="../images/pawfect.jpg" alt="Descripción">
-          </div>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <form class="d-flex" role="search">
+                    <div class="input-group-text" id="search-1">
+                      <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search" id="form-001">
+                      <button class="btn" type="submit" id="btnsearch">
+                          <svg id='search-logo' xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l -3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                      </button>
+                    </div>
+                </form>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!-- * -->
-          <form class="d-flex" role="search">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle custom-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Productos
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Perros</a></li>
+                    <li><a class="dropdown-item" href="#">Gatos</a></li>
+                    <li><a class="dropdown-item" href="#">Otros</a></li>
+                </ul>
 
-              <div class="input-group-text" id="search-1">
-                <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search" id="form-001">
-                <button class="btn" type="submit" id="btnsearch">
-                    <svg id='search-logo' xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l -3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                  </svg>
-                </button>
-              </div>
-
-          </form>
+                
+                <li class="nav-item custom-hover">
+                    <a id='element-acerca-nosotros' class="nav-link" href="#">Acerca de nosotros</a>
+                </li>
+                <li class="nav-item custom-hover">
+                <a class="nav-link" href="#">Comunidad</a>
+                </li>
+                <li class="nav-item custom-hover">
+                <a class="nav-link" href="#">Regístrate</a>
+                </li>
+            </ul>
+            
         </div>
-<!-- Custom hover es el elemento creado css que le da la animación a nuestra barra pawfect -->
-<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-  <!-- <a class="navbar-brand" href="#">Hidden brand</a> -->
-  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <!-- * -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle custom-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Productos
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Perros</a></li>
-        <li><a class="dropdown-item" href="#">Gatos</a></li>
-        <li><a class="dropdown-item" href="#">Otros</a></li>
-      </ul>
-
-      <!-- <li class="nav-item">
-        <a id='element-acerca-nosotros'class="nav-link active" aria-current="page" href="#">Acerca de nosotros</a>
-      </li> -->
-      <li class="nav-item"></li>
-        <a id='element-acerca-nosotros' class="nav-link custom-hover" href="#">Acerca de nosotros</a>
-    </li>
-    <li class="nav-item custom-hover">
-      <a class="nav-link" href="#">Comunidad</a>
-    </li>
-    <li class="nav-item custom-hover">
-      <a class="nav-link" href="#">Regístrate</a>
-    </li>
-  </ul>
-</div>
         <!-- * -->
         <div class="icon-container">
 
