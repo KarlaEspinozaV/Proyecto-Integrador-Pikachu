@@ -32,6 +32,15 @@ li .nav-link {
   border-bottom: 2px solid #000;
 }
 
+#form-search{
+  width: 260px;
+
+}
+
+#all-icon-container{
+  margin-left: 10px;
+}
+
 #user-logo{
   height: 30px;
   width: 30px;
