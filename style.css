@@ -102,7 +102,7 @@ li .nav-link {
   }
 }
 
-@media (width < 1024px){
+@media (width < 990px){
   #main-nav-container{
     width: 100% !important;
     flex-wrap: wrap;
