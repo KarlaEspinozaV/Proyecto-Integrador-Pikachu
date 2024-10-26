@@ -34,6 +34,7 @@ li .nav-link {
 
 #form-search{
   width: 260px;
+  margin-right: 50px;
 
 }
 
@@ -75,13 +76,20 @@ li .nav-link {
   margin-right: 10px;
 }
 
+#element-acerca-nosotros:hover{
+
+  background-color: #FDF270;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 0.5rem;
+}
 
 .custom-hover:hover {
   background-color: #FDF270;
   color: white;
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.3s, color 0.3s;
   border-radius: 0.5rem;
 }
+
 
 @media (width < 1024px){
   #main-nav-container{
