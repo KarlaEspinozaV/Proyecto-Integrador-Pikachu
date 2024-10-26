@@ -9,33 +9,31 @@ body {
 	align-items: center;
 	height: 100vh;
 }
+
 .container {
 	display: flex;
-	width: 100%;
+	justify-content: center;
+	align-items: center;
 	background-color: #118ab2;
-	padding: 50px;
+	padding: 50px 0;
 	border-radius: 20px;
+	gap: 5em;
 }
 
-#left-box {
-	display: grid;
-	padding: 0;
-
-	justify-content: center;
-	align-items: center;
-	flex: column;
+/* Media query for tablet and smaller screens */
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
 }
 
-#right-box {
-	display: grid;
-
-	color: white;
-	align-items: center;
-	justify-content: center;
-	padding-inline: 3rem;
+.container img {
+	border-radius: 5%;
+	border: 5px solid pink;
 }
 
 .input-form {
+	color: white;
 	width: 100%;
 }
 
