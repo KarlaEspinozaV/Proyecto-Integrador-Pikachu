@@ -4,16 +4,79 @@
 	box-sizing: border-box;
 }
 
-form {
-	width: 75%;
+body {
+	display: grid;
+	align-items: center;
+	height: 100vh;
+}
+.container {
+	display: flex;
+	width: 100%;
 	background-color: #118ab2;
 	padding: 50px;
 	border-radius: 20px;
-	margin-top: 150px;
 }
 
-.form-label {
-	color: #ffff;
+#left-box {
+	display: grid;
+	padding: 0;
+
+	justify-content: center;
+	align-items: center;
+	flex: column;
+}
+
+#right-box {
+	display: grid;
+
+	color: white;
+	align-items: center;
+	justify-content: center;
+	padding-inline: 3rem;
+}
+
+.input-form {
+	width: 100%;
+}
+
+#validationCustomEmail {
+	border: 0;
+	background-color: #7888c6;
+}
+
+#validationCustomEmail::placeholder {
+	color: rgba(255, 255, 255, 0.2); /* Color blanco con opacidad */
+}
+
+.doble-number {
+	display: flex;
+	justify-content: space-between;
+	gap: 0;
+	width: 100%;
+}
+
+#inputGroupPrepend2 {
+	border: 0;
+	background-color: #7888c6;
+	display: flex;
+}
+
+#validationDefaultUsernumber {
+	background-color: #7888c6;
+	border: 0;
+	border-radius: 3%;
+	background-color: #7888c6;
+	resize: none;
+}
+
+#mensaje {
+	border: 0;
+	border-radius: 3%;
+	background-color: #7888c6;
+	resize: none;
+}
+#mensaje::placeholder {
+	color: rgba(255, 255, 255, 0.2); /* Color blanco con opacidad */
 }
 
 #validationCustomEmail {
@@ -33,4 +96,8 @@ form {
 }
 #mensaje::placeholder {
 	color: rgba(255, 255, 255, 0.2); /* Color blanco con opacidad */
+}
+
+#bottun {
+	margin: 10px;
 }
