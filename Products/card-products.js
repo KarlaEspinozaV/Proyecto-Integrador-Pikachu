@@ -1,5 +1,5 @@
 const URL_JSON = "./assets/articulos.json";
-const mainContainer = document.querySelector(".container-j .row");
+const mainContainer = document.querySelector(".container");
 
 async function fetchAndDisplayProducts() {
 	try {
@@ -18,55 +18,21 @@ async function fetchAndDisplayProducts() {
 // Función para crear y mostrar las tarjetas de productos
 function showAllProducts(productsArray) {
 	productsArray.forEach((product) => {
-		// Crear la columna de la tarjeta
-		const col = document.createElement("div");
-		col.classList.add("col");
+		const cardProduct = `
+			
+				<div class="card col-md-4 col-lg-3 mb-2" id="card-product">
+					<img src="${product.img}" class="card-img-top" alt="${product.name}">
+					<div class="card-body">
+						<h5 class="card-title">${product.name}</h5>
+						<p class="card-text">${product.description}</p>
+						<p class="card-price">Precio: ${product.precio}</p>
+					</div>
+				</div>
+			
+		`;
 
-		// Crear la tarjeta principal
-		const card = document.createElement("div");
-		card.classList.add("card");
-		card.id = "product-card";
-		card.style.width = "18rem";
-
-		// Crear y configurar la imagen
-		const img = document.createElement("img");
-		img.classList.add("card-img-top");
-		img.id = "img-product";
-		img.src = product.img;
-		img.alt = product.name;
-
-		// Crear el cuerpo de la tarjeta
-		const cardBody = document.createElement("div");
-		cardBody.classList.add("card-body");
-		cardBody.id = "body-product";
-
-		// Crear y configurar el título
-		const title = document.createElement("h5");
-		title.classList.add("card-title");
-		title.id = "name";
-		title.textContent = product.name;
-
-		// Crear y configurar el precio
-		const price = document.createElement("p");
-		price.classList.add("card-text");
-		price.id = "precio";
-		price.textContent = product.precio;
-
-		// Crear y configurar la descripción
-		const description = document.createElement("p");
-		description.classList.add("description");
-		description.textContent = product.description;
-
-		// Ensamblar los elementos dentro de la tarjeta
-		cardBody.appendChild(title);
-		cardBody.appendChild(price);
-		cardBody.appendChild(description);
-		card.appendChild(img);
-		card.appendChild(cardBody);
-		col.appendChild(card);
-
-		// Insertar la tarjeta completa en el contenedor principal
-		mainContainer.appendChild(col);
+		// Inserta la tarjeta dentro de la fila
+		mainContainer.insertAdjacentHTML("afterend", cardProduct);
 	});
 }
 
