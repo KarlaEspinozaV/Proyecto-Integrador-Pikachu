@@ -10,7 +10,7 @@ body {
 	height: 100vh;
 }
 
-.container {
+#form_container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -23,13 +23,17 @@ body {
 /* Media query for tablet and smaller screens */
 @media (max-width: 768px) {
 	.container {
-		flex-direction: column;
+		#form_container {
+			flex-direction: column;
+		}
 	}
 }
 
 .container img {
-	border-radius: 5%;
-	border: 5px solid pink;
+	#form_container img {
+		border-radius: 5%;
+		border: 5px solid pink;
+	}
 }
 
 .input-form {
@@ -98,4 +102,23 @@ body {
 
 #bottun {
 	margin: 10px;
+}
+
+#footer {
+	position: relative;
+	color: #000000;
+	text-align: center;
+	width: 100%;
+	padding: 20px 50px;
+	background-color: whitesmoke;
+	min-height: 50px;
+	font-size: 0.9rem;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	bottom: 0;
+	display: flex;
+	grid-column: 1/-1;
+	flex-grow: 1;
+	position: fixed;
 }
