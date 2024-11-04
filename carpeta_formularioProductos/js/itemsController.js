@@ -15,7 +15,7 @@ class ProductsController{
     return this.items;
   }
 
-  addItem(name, description, price, img){
+  async addItem(name, description, price, img){
     const item = {
       id: ++ this.current_Id,
       name,
@@ -26,8 +26,8 @@ class ProductsController{
     };
 
     this.items.push(item);
-    // const stringItems = JSON.stringify(this.items);
-    // localStorage.setItem("Items",stringItems);
+    const stringItems = JSON.stringify(this.items);
+    localStorage.setItem("Items",stringItems);
   }
 
   updateItem(id, newData) {
@@ -38,8 +38,8 @@ class ProductsController{
       item.price = newData.price || item.price;
       item.img = newData.img || item.img;
 
-      // const stringItems = JSON.stringify(this.items);
-      // localStorage.setItem("Items",stringItems);
+      const stringItems = JSON.stringify(this.items);
+      localStorage.setItem("Items",stringItems);
       return true;
     }
     return false;
@@ -50,8 +50,8 @@ class ProductsController{
     if (index !== -1) {
       this.items.splice(index, 1);
 
-    // const stringItems = JSON.stringify(this.items);
-    // localStorage.setItem("Items",stringItems);
+    const stringItems = JSON.stringify(this.items);
+    localStorage.setItem("Items",stringItems);
       return true;
     }
     return false;
@@ -60,8 +60,8 @@ class ProductsController{
   clearItems() {
     this.items = [];
 
-    // const stringItems = JSON.stringify(this.items);
-    // localStorage.setItem("Items",stringItems);
+    const stringItems = JSON.stringify(this.items);
+    localStorage.setItem("Items",stringItems);
   }
 
   loadItemsFromLocalStorage() {
@@ -76,6 +76,23 @@ class ProductsController{
 }
 }
 
+const encodeImageAsUrl = (img) => {
+  return new Promise((resolve, reject) => {
+    if (img) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        resolve(e.target.result);
+      };
+      reader.onerror = function(error) {
+        reject(error);
+      };
+      reader.readAsDataURL(img);
+    } else {
+      resolve(null);
+    }
+  });
+};
+
 const prueba = new ProductsController();
 
 const productName = document.getElementById('productName');
@@ -84,8 +101,10 @@ const price = document.getElementById('productPrice');
 const image = document.getElementById('productImage');
 console.log(image);
 
-document.getElementById('addProductButton').addEventListener('click',() => {
-  prueba.addItem(productName.value, description.value, price.value, image.files[0]);
+document.getElementById('addProductButton').addEventListener('click', async () => {
+  const imageAsBase64Url = await encodeImageAsUrl(image.files[0]);
+
+  prueba.addItem(productName.value, description.value, price.value, imageAsBase64Url);
   productName.value = '';
   description.value = '';
   price.value = '';
