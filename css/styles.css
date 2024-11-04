@@ -1,0 +1,105 @@
+/* Fondo general del cuerpo */
+body {
+    background-color: #fdf270;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.main-container {
+    padding-top: 80px; /* Espacio para el navbar */
+}
+
+/* Contenedor de texto principal */
+.text-container {
+    background-color: #7888c6;
+    color: #fdf270;
+    padding: 50px;
+    border: 15px solid #7888c6;
+    border-radius: 20px;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Estilos del texto */
+header h1 {
+    color: #fdf270;
+    background-color: #7888c6;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+main {
+    color: #fdf270;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.logo-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+/* Estilo para las imágenes flotantes */
+.floating-img {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Posicionamiento específico de cada imagen */
+.floating-img-1 {
+    top: 20%; /* Primer tercio a la izquierda */
+    left: -60px; /* Coloca la imagen ligeramente fuera del borde */
+}
+
+.floating-img-2 {
+    top: 60%; /* Segundo tercio a la izquierda */
+    left: -60px;
+}
+
+.floating-img-3 {
+    top: 20%; /* Primer tercio a la derecha */
+    right: -60px;
+}
+
+.floating-img-4 {
+    top: 60%; /* Segundo tercio a la derecha */
+    right: -60px;
+}
+
+/* Footer */
+.footer-rights {
+    color: #000000;
+    background-color: whitesmoke;
+    font-size: 0.9rem;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 767px) {
+    /* Ocultar imágenes flotantes en pantallas pequeñas */
+    .floating-img {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .logo-img {
+        width: 80px;
+        height: 80px;
+    }
+    .text-container {
+        padding: 20px;
+    }
+}
