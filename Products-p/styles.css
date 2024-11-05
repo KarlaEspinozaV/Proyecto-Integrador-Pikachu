@@ -1,0 +1,115 @@
+/* Fondo del body */
+body {
+    background-color: #FFEB3B; /* Fondo amarillo */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo del main */
+main {
+    background-color: #FFEB3B;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+	text-align: center; /* Centra el texto horizontalmente */
+    font-size: 2em; /* Tamaño del texto */
+    color: #273054; /* Color del texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Contenedor principal */
+.container-j .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta las columnas según el espacio */
+    gap: 20px;
+    max-width: 1200px;
+    background-color: #7986CB;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de las cards */
+#product-card {
+    background-color: #f47c98;
+    color: white;
+    border: 10px solid #273054;
+    border-radius: 10px; /* Cambiado a px para una apariencia más estándar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las cards */
+    text-align: center;
+}
+
+/* Imagen de la tarjeta */
+#img-product {
+    width: 100%; /* Haz que ocupe todo el ancho de la card */
+    height: auto;
+    padding-top: 10px;
+    border-radius: 10px;
+    border-bottom: 1px solid #ddd; /* Línea debajo de la imagen */
+}
+
+/* Título de la tarjeta */
+#name {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+/* Precio y descripción de la tarjeta */
+#precio, .description {
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Columna que contiene cada tarjeta */
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container-j .row {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Reduce el tamaño mínimo de las tarjetas */
+        padding: 10px;
+    }
+    
+    #product-card {
+        width: 100%; /* Para que las cards ocupen todo el ancho de su contenedor */
+        margin-bottom: 10px;
+    }
+    
+    #img-product {
+        width: 100%;
+        padding-top: 5px;
+    }
+
+    .title {
+        font-size: 1.5em; /* Ajuste de tamaño de fuente para pantallas más pequeñas */
+        margin-bottom: 15px;
+    }
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .container-j .row {
+        grid-template-columns: 1fr; /* Las cards se muestran en una columna en pantallas muy pequeñas */
+    }
+    
+    .title {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+    
+    #product-card {
+        padding: 10px;
+    }
+}
