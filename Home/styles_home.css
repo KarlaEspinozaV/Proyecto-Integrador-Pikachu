@@ -1,0 +1,81 @@
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	background-color: #fdf280;
+}
+
+.container {
+	max-width: 75%;
+	min-height: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+}
+
+.text-home {
+	border-radius: 12px;
+	background-color: #7888c6;
+	color: white;
+	padding: 20px;
+	width: 350px;
+	height: 190px;
+	position: relative;
+	top: -20px; /* Ajusta la posición verticalmente */
+	left: 30px; /* Ajusta la posición horizontalmente */
+	z-index: 1; /* Asegura que el texto esté encima de la imagen */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-home h2 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.text-home button {
+	border: 0;
+	border-radius: 10px;
+	color: white;
+	background-color: rgba(217, 98, 159, 0.34);
+	height: 40px;
+	margin: 15px;
+	margin-top: 30px;
+}
+
+.img-home {
+	width: 400px;
+}
+.img-home img {
+	width: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+}
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column; /* Cambia la disposición a columna */
+		justify-content: center;
+		align-items: center; /* Alinea los elementos al centro */
+		max-width: 90%; /* Ajusta el ancho */
+	}
+
+	.img-home {
+		width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+		max-width: 300px; /* Limita el tamaño de la imagen en móviles */
+		order: 1; /* Asegura que la imagen aparezca primero */
+	}
+
+	.text-home {
+		width: 100%; /* Ajusta el ancho del texto */
+		max-width: 250px; /* Limita el ancho del texto en móviles */
+		height: auto; /* Permite que el contenedor de texto ajuste su altura */
+		margin-top: 20px; /* Añade un espacio entre la imagen y el texto */
+		order: 2; /* Asegura que el texto aparezca después de la imagen */
+		top: -55px;
+		left: auto;
+		position: relative; /* Cambia a posición estática para evitar superposiciones */
+	}
+}

@@ -1,5 +1,5 @@
 const URL_JSON = "./assets/articulos.json";
-const mainContainer = document.querySelector(".container");
+const mainContainer = document.querySelector(".cards");
 
 async function fetchAndDisplayProducts() {
 	try {
