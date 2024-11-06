@@ -1,0 +1,75 @@
+main {
+	background-color: #fdf270; /* Fondo amarillo */
+     width: 100%; *
+	min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+} 
+
+#card-product {
+	background-color: #f47c98;
+	color: white;
+	border: 10px solid #273054;
+	border-radius: 10%;
+	justify-content: center;
+	align-items: center;
+}
+
+#img-product {
+	width: 80%;
+	padding-top: 10px;
+	border-radius: 10%;
+}
+
+/* Estilo de las tarjetas */
+.cards {
+	border: 2px solid red;
+	background-color: #7888c6;
+	border-radius: 10px;
+	padding: 16px;
+    flex-wrap: wrap;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	flex-grow: 1; /* Permite que cada tarjeta se expanda */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	/* flex-direction: column; */
+	align-items: center;
+	text-align: center;
+}
+.cards img {
+	max-width: 100%; /* Asegura que las imágenes no sobresalgan del contenedor */
+	height: auto;
+}
+
+.cards > * {
+	margin: 8px 0;
+	flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+	.cards {
+		max-width: 100%;
+		flex: 1 1 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.cards {
+		flex: 2 1 100%;
+		max-width: 45%;
+	}
+	.contenedor-tarjetas {
+		justify-content: center;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+	.cards {
+		flex: 1 1 45%;
+		max-width: 100%;
+	}
+	.contenedor-tarjetas {
+		justify-content: space-between;
+	}
+}
