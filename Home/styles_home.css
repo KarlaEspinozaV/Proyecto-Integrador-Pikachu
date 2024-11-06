@@ -8,7 +8,7 @@ main {
 	background-color: #fdf280;
 }
 
-.container {
+.container-home {
 	max-width: 75%;
 	min-height: 50%;
 	display: flex;
@@ -55,7 +55,7 @@ main {
 	object-fit: cover;
 }
 @media (max-width: 768px) {
-	.container {
+	.container-home {
 		flex-direction: column; /* Cambia la disposición a columna */
 		justify-content: center;
 		align-items: center; /* Alinea los elementos al centro */
