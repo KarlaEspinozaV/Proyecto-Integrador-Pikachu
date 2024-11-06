@@ -1,76 +1,154 @@
-body {
-    background-color: #fdf270;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    grid-template-columns: repeat   (12,1fr);
+header{
+    background-color: white;
+    margin-bottom: 0;
+  }
+  
+  #logo-header{
+    margin-left: 10px;
+    height: 80px;
+    width: 80px;
+  }
+  
+  li .nav-link {
+    color: #000; /* Cambia el color del texto a negro */
+  }
+  
+  #main-nav-container{
+    flex-wrap: unset;
+    padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    position: relative;
+    }
+  
+  #div-search{
+    width: 260px;
+  }
+  
+  #form-search{
+    width: 280px;
+  }
+  
+  #all-icon-container{
+    margin-left: 10px;
+  }
+  
+  #user-logo{
+    height: 30px;
+    width: 30px;
+    color: #000;
+  }
+  #home-logo{
+    height: 30px;
+    width: 30px;
+    color: black;
+  }
+  
+  #cart-logo{
+    height: 30px;
+    width: 30px;
+    color: black;
+  }
+  
+  #element-acerca-nosotros{
+    white-space: nowrap;
+    color: #000;
+  }
+  
+  #container-button-logo {
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .icon-container svg {
+    margin-right: 10px;
+  }
+  
+  #element-acerca-nosotros:hover{
+    background-color: #F47C98;
+    transition: background-color 0.5s, color 0.5s;
+    border-radius: 0.5rem;
+  }
+  
+  .custom-hover:hover {
+    background-color: #F47C98;
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+    border-radius: 0.5rem;
+  }
+  
+  #all-icon-container-responsive {
+    display: none;
+  }
+  
+  #toggler-brand-icons {
+    display: flex;
+  }
+  
+  @media (width < 1024px){
+    #main-nav-container{
+      width: 100% !important;
+    }
+  }
+  
+  @media (width < 990px){
+    #main-nav-container{
+      width: 100% !important;
+      flex-wrap: wrap;
+    }
+  
+    #all-icon-container {
+      display: none;
+    }
+  
+    #all-icon-container-responsive {
+      display: flex;
+    }
+  
+    #toggler-brand-icons {
+      width: 100% !important;
+    }
+  }
+  
+  #main-nav-container{
+  color: #efefec;
+  }
+  
+  .container-fluid{
+  color: #f8f8f6;
+  }
+
+
+  body{
+    background-color: #fdf270 !important;
+ /*   padding-top: 15vh;
+    padding-bottom: 15vh;*/
 }
 
-.navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
 
-.container-main {
-    text-align: center;
-    max-width: 900px;
-    padding: 50px;
-    border: 15px solid #7888c6;
-    border-radius: 20px;
-    background-color: #7888c6;
-    margin-top: 80px;
-    margin-bottom: 80px; 
-    flex: auto;
-    content: center;
-}
-
-header h1 {
-    color: #fdf270;
-    font-weight: bold;
-    text-align: center;
-    font-size: 2rem;
-}
-
-main {
-    color: #fdf270;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.6;
-
-}
-
-main img {
-    border-radius: 10%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-footer {
+#footer {
+	position: relative;
     color: #000000;
     text-align: center;
-
-    padding: 20px;
+	width: 100%; 
+    padding: 20px 50px;
     background-color: whitesmoke;
+	min-height: 50px;
     font-size: 0.9rem;
-    width: 100%; 
-    position: relative;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
     bottom: 0;
     display: flex;
     grid-column: 1/-1;
     flex-grow: 1;
+	position: fixed;
 }
-
-.main-container {
-    display: flex;
-    align-items: flex-start;
-}
-
-.col-md-8{
-    content: center;
-}
+  
