@@ -1,0 +1,267 @@
+
+body {
+     /* Fondo amarillo */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+main {
+    background-color: #FFEB3B;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	max-width: 100%;
+}
+
+.title{
+	text-align: center; 
+    font-size: 2em; 
+    color: #273054;
+    margin-bottom: 20px;
+}
+
+
+.container-j .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    background-color: #7986CB;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#product-card {
+    background-color: #f47c98;
+    color: white;
+    border: 10px solid #273054;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+
+#img-product {
+    width: 100%; 
+    height: auto;
+    padding-top: 10px;
+    border-radius: 10px;
+    border-bottom: 1px solid #ddd; 
+}
+
+
+#name {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+
+#precio, .description {
+    color: white;
+    font-size: 0.9em;
+}
+
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .container-j .row {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+    }
+
+    #product-card {
+        max-height: 300px; 
+        padding: 15px; 
+    }
+
+    #img-product {
+        width: 90%; 
+    }
+
+    .card-body p {
+        font-size: 0.9em; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container-j .row {
+        grid-template-columns: 1fr; 
+    }
+    
+    .title {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+    
+    #product-card {
+        padding: 10px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-j .row {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+/* css de la barra de navegacion */
+
+header{
+    background-color: white;
+    margin-bottom: 7.5dvh;
+  }
+  
+  #logo-header{
+    margin-left: 10px;
+    height: 80px;
+    width: 80px;
+  }
+  
+  li .nav-link {
+    color: #000; /* Cambia el color del texto a negro */
+  }
+  
+  #main-nav-container{
+    flex-wrap: unset;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    position: relative;
+    }
+  
+  #div-search{
+    width: 260px;
+  }
+  
+  #form-search{
+    width: 280px;
+  }
+  
+  #all-icon-container{
+    margin-left: 10px;
+  }
+  
+  #user-logo{
+    height: 30px;
+    width: 30px;
+    color: #000;
+  }
+  #home-logo{
+    height: 30px;
+    width: 30px;
+    color: black;
+  }
+  
+  #cart-logo{
+    height: 30px;
+    width: 30px;
+    color: black;
+  }
+  
+  #element-acerca-nosotros{
+    white-space: nowrap;
+    color: #000;
+  }
+  
+  #container-button-logo {
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .icon-container svg {
+    margin-right: 10px;
+  }
+  
+  #element-acerca-nosotros:hover{
+    background-color: #F47C98;
+    transition: background-color 0.5s, color 0.5s;
+    border-radius: 0.5rem;
+  }
+  
+  .custom-hover:hover {
+    background-color: #F47C98;
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+    border-radius: 0.5rem;
+  }
+  
+  #all-icon-container-responsive {
+    display: none;
+  }
+  
+  #toggler-brand-icons {
+    display: flex;
+  }
+  
+  @media (width < 1024px){
+    #main-nav-container{
+      width: 100% !important;
+    }
+  }
+  
+  @media (width < 990px){
+    #main-nav-container{
+      width: 100% !important;
+      flex-wrap: wrap;
+    }
+  
+    #all-icon-container {
+      display: none;
+    }
+  
+    #all-icon-container-responsive {
+      display: flex;
+    }
+  
+    #toggler-brand-icons {
+      width: 100% !important;
+    }
+  }
+  
+  #main-nav-container{
+  color: #efefec;
+  }
+  
+  .container-fluid{
+  color: #f8f8f6;
+  }
+  
+#footer {
+	position: relative;
+    color: #000000;
+    text-align: center;
+	width: 100%; 
+    padding: 20px 50px;
+    background-color: whitesmoke;
+	min-height: 50px;
+    font-size: 0.9rem;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+    bottom: 0;
+    display: flex;
+    grid-column: 1/-1;
+    flex-grow: 1;
+	position: fixed;
+}
