@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./filter.css">
     <link rel="stylesheet" href="./styles_modal.css">
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/itemsController.js"></script>
 </head>
 <body>
     <header>
@@ -119,8 +120,8 @@
     <main>
       <!-- Añadiendo filtro -->
       <h2 class="title">Nuestros productos</h2>
-      <a class="btn btn-primary add-product" href="#" role="button">Agregar producto</a>
-      <button type="button" class="btn btn-outline-primary add-product">Editar producto</button>
+      <a class="btn btn-outline-primary add-product" href="#" role="button">Agregar producto</a>
+      <!-- <button type="button" class="btn btn-outline-primary add-product">Editar producto</button> -->
 
       <!-- Aquí comienza el modal -->
          <section class="modal">
@@ -147,8 +148,10 @@
                     <input type="file" class="form-control" id="productImage" accept="image/*" required>
                 </div>
                 <button id="addProductButton" type="button" class="btn btn-primary w-100">Subir Producto</button>
-                <a class="btn btn-primary modal_close" href="#" role="button">Link</a>
-                <a href="#" class="modal_close">Cerrar Modal</a>
+                <!-- <button id="addProductButton" type="button" class="btn btn-primary w-100">Editar Producto</button>
+                <button id="addProductButton" type="button" class="btn btn-primary w-100">Eliminar Producto</button> -->
+                <!-- <a class="btn btn-primary modal_close" href="#" role="button">Link</a> -->
+                <a href="#" class="btn modal_close w-100">Cerrar Modal</a>
                 </form>
             </div>
            </div>
