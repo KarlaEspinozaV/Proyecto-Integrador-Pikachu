@@ -1,5 +1,5 @@
-import ItemsController from "./itemsController";
-
+import { ItemsController } from "./itemsController.js";
+console.log("aaaa????", ItemsController);
 // Inicializa un controlador de productos con currentId establecido en 0
 const itemsController = new ItemsController(0);
 

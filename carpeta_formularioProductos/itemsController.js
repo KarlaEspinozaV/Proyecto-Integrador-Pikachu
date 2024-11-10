@@ -1,4 +1,4 @@
-export class itemsController {
+export class ItemsController {
 	items;
 	current_Id;
 
@@ -15,7 +15,7 @@ export class itemsController {
 		return this.items;
 	}
 
-	/*async */ addItem(name, description, price, img) {
+	addItem(name, description, price, img) {
 		/** async no tiene funcionalidad */
 		const item = {
 			id: ++this.current_Id,
@@ -77,22 +77,22 @@ export class itemsController {
 	}
 }
 
-const encodeImageAsUrl = (img) => {
-	return new Promise((resolve, reject) => {
-		if (img) {
-			const reader = new FileReader();
-			reader.onload = function (e) {
-				resolve(e.target.result);
-			};
-			reader.onerror = function (error) {
-				reject(error);
-			};
-			reader.readAsDataURL(img);
-		} else {
-			resolve(null);
-		}
-	});
-};
+// const encodeImageAsUrl = (img) => {
+// 	return new Promise((resolve, reject) => {
+// 		if (img) {
+// 			const reader = new FileReader();
+// 			reader.onload = function (e) {
+// 				resolve(e.target.result);
+// 			};
+// 			reader.onerror = function (error) {
+// 				reject(error);
+// 			};
+// 			reader.readAsDataURL(img);
+// 		} else {
+// 			resolve(null);
+// 		}
+// 	});
+// };
 
 /// --------- Para acortar el codigo y optimizarlo, eliminar pruebas ---------
 
