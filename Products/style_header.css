@@ -1,6 +1,6 @@
 main {
 	background-color: #fdf270; /* Fondo amarillo */
-     width: 100%; *
+    width: 100%; 
 	min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
 	display: flex;
 	justify-content: center;
