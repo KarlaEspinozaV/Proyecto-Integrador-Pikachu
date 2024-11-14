@@ -17,7 +17,7 @@
 		{
 			"id": 3,
 			"name": "Cama Ergonómica para Perros",
-			"img": "./Assets/images/Articulos/img3.png",
+			"url": "./Assets/images/Articulos/img3.png",
 			"precio": "$900",
 			"description": "Cama acolchada con soporte ergonómico, diseñada para el confort y descanso óptimo de tu perro."
 		},
