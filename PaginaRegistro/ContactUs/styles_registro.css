@@ -12,15 +12,22 @@ main {
 	padding: 0;
 	margin: 0;
 	gap: 15px;
-	background-color: #fdf280;
+	background: rgb(17, 138, 178);
+	background: radial-gradient(
+		circle,
+		rgba(17, 138, 178, 1) 0%,
+		rgba(253, 242, 128, 1) 100%
+	);
 }
 #form_container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: solid 10px #f47c98;
 	background-color: #118ab2;
 	padding: 50px;
 	border-radius: 20px;
+	gap: 5em;
 }
 
 .text-center {
@@ -29,19 +36,23 @@ main {
 	font-size: 30px;
 }
 
-/* Media query for tablet and smaller screens */
-@media (max-width: 1024px) {
-	#form_container {
-		flex-direction: column;
-	}
-	#registration-info {
-		flex-direction: column;
-	}
-}
-
 .container-img {
 	border-radius: 5%;
 }
+
+#validationDefaultUsernumber {
+	width: 100%;
+
+	border-radius: 15px;
+	background-color: #7888c6;
+}
+
+#num-lada {
+	display: flex;
+	border-radius: 15px;
+	background-color: #7888c6;
+}
+
 #input-registro {
 	gap: 10rem;
 	color: white;
@@ -60,4 +71,14 @@ main {
 
 #registro-boton {
 	margin: 10px;
+}
+
+/* Media query for tablet and smaller screens */
+@media (max-width: 1024px) {
+	#form_container {
+		flex-direction: column;
+	}
+	#registration-info {
+		flex-direction: column;
+	}
 }
