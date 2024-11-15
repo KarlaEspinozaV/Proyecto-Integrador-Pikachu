@@ -1,83 +1,83 @@
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 main {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	padding: 0;
-	margin: 0;
-	gap: 15px;
-	background: rgb(253, 242, 112);
-	background: linear-gradient(
-		77deg,
-		rgba(253, 242, 112, 1) 25%,
-		rgba(120, 136, 198, 1) 69%,
-		rgba(39, 48, 84, 1) 100%
-	);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+  background: rgb(253, 242, 112);
+  background: linear-gradient(
+    77deg,
+    rgba(253, 242, 112, 1) 25%,
+    rgba(120, 136, 198, 1) 69%,
+    rgba(39, 48, 84, 1) 100%
+  );
 }
 #form_container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: rgb(39, 48, 84) 0px 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgb(39, 48, 84) 0px 5px 15px;
 
-	box-shadow: #273054;
-	background-color: #7888c6;
-	padding: 50px;
-	border-radius: 20px;
-	gap: 5em;
+  box-shadow: #273054;
+  background-color: #7888c6;
+  padding: 50px;
+  border-radius: 20px;
+  gap: 5em;
 }
 
 .text-center {
-	margin: 35px;
-	color: white;
-	font-size: 30px;
+  margin: 35px;
+  color: white;
+  font-size: 30px;
 }
 
 .container-img {
-	border-radius: 5%;
+  border-radius: 5%;
 }
 
 #validationDefaultUsernumber {
-	width: 100%;
-	border: none;
-	border-radius: 15px;
-	background-color: #fdf270;
-	opacity: 0.9;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  background-color: #fdf270;
+  opacity: 0.9;
 }
 
 #input-registro {
-	gap: 10rem;
-	color: white;
-	width: 100%;
+  gap: 10rem;
+  color: white;
+  width: 100%;
 }
 
 .form-control {
-	border: solid 12px red;
-	border-radius: 15px;
-	background-color: #7888c6;
+  border: solid 12px red;
+  border-radius: 15px;
+  background-color: #7888c6;
 }
 
 #validationCustomEmail::placeholder {
-	color: rgba(255, 255, 255, 0.2); /* Color blanco con opacidad */
+  color: rgba(255, 255, 255, 0.2); /* Color blanco con opacidad */
 }
 
 #registro-boton {
-	margin: 10px;
-	background-color: #f47c98;
+  margin: 10px;
+  background-color: #f47c98;
 }
 
 /* Media query for tablet and smaller screens */
 @media (max-width: 1024px) {
-	#form_container {
-		flex-direction: column;
-	}
-	#registration-info {
-		flex-direction: column;
-	}
+  #form_container {
+    flex-direction: column;
+  }
+  #registration-info {
+    flex-direction: column;
+  }
 }
