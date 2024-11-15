@@ -153,7 +153,8 @@
                 </div>
             </div>
             <!-- ----- input form ----- -->
-
+            <!-- ----- eliminé validationDefaultUsernumber solo de este form para evitar conflictos con las alerts y cuando se envíe a local storage
+             ya que se confundirían los datos por tener mismo id ----- -->
             <div class="right-box" id="registro-container">
                 <form class="mx-auto input-form" id="input-registro">
                     <!-- ----- nombre ----- -->
@@ -161,8 +162,8 @@
                         <label id="label-form" for="validationDefaultUsernumber" class="form-label">Nombre(s)</label>
                         <div class="input-group">
 
-                            <input type="text" class="form-control" id="validationDefaultUsernumber"
-                                aria-describedby="inputGroupPrepend2" required>
+                            <input type="text" class="form-control" 
+                                aria-describedby="inputGroupPrepend2" required name="nombreForm">
                         </div>
                     </div>
                     <!-- -------- apellido ------- -->
@@ -170,8 +171,8 @@
                         <label id="label-form" for="validationDefaultUsernumber" class="form-label">Apellido(s)</label>
                         <div class="input-group">
 
-                            <input type="text" class="form-control" id="validationDefaultUsernumber"
-                                aria-describedby="inputGroupPrepend2" required>
+                            <input type="text" class="form-control" 
+                                aria-describedby="inputGroupPrepend2" required name="apellido">
                         </div>
                     </div>
 
@@ -181,8 +182,8 @@
                         <label id="label-form" for="validationDefaultUsernumber" class="form-label">Número de
                             teléfono</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="validationDefaultUsernumber"
-                                aria-describedby="inputGroupPrepend2" required>
+                            <input type="text" class="form-control" 
+                                aria-describedby="inputGroupPrepend2" required name="telefon">
                         </div>
                     </div>
 
@@ -191,10 +192,9 @@
                         <label for="validationCustomEmail" class="form-label" id="label-correo">Correo
                             electrónico</label>
                         <div class="input-group has-validation">
-
-                            <input class="form-control" id="validationDefaultUsernumber"
-                                aria-describedby="inputGroupPrepend" placeholder="nombre@ejemplo.com" required
-                                pattern="[a-zA-Z0-9._%+-]+@ejemplo\.com">
+                            <!-- ----------- eliminé pattern="[a-zA-Z0-9._%+-]+@ejemplo\.com" porqué enviaba conflictos ---- -->
+                            <input class="form-control" 
+                                aria-describedby="inputGroupPrepend" placeholder="nombre@ejemplo.com"  name="email">
                             <div class="invalid-feedback">
                                 Por favor ingresa un correo electrónico válido en el formato nombre@ejemplo.com.
                             </div>
@@ -202,12 +202,12 @@
                     </div>
                     <!-- ------- contraseña ------  -->
 
-                    <div id="registro-contrasena" class="col">
-                        <label id="label-form" for="validationDefaultUsernumber" class="form-label">Contraseña</label>
+                    <div id="registro-contrasena" class="col"  >
+                        <label id="label-form" for="validationDefaultUsernumber" class="form-label" >Contraseña</label>
                         <div class="input-group">
 
-                            <input type="text" class="form-control" id="validationDefaultUsernumber"
-                                aria-describedby="inputGroupPrepend2" required>
+                            <input type="password" class="form-control"
+                                aria-describedby="inputGroupPrepend2" required name="contra">
                         </div>
                     </div>
 
@@ -223,12 +223,18 @@
                             </div>
                         </div>
                     </div> -->
+                    <div class="mb-3 form-check">
+                        <input  value="true" type="checkbox" class="form-check-input" id="exampleCheck1" name="check">
+                        <label  class="form-check-label" for="exampleCheck1">Acepto la política de privacidad</label>
+                      </div>
                     <button id="registro-boton" type="submit" class="btn btn-primary">Registrase</button>
                 </form>
             </div>
 
 
         </div>
+
+        <div id="alertContainer"></div>
     </main>
     <footer id="footer">
         <p>&copy; 2024 Pawfect. All rights reserved.</p>
@@ -237,6 +243,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script defer src="validaciones.js"></script>
 
 
 </body>
