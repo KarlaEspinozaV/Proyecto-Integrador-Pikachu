@@ -39,8 +39,37 @@ regForm.addEventListener("submit", (event) => {
     showUserInfo(dataObject);
     //la variable lanza true y detiene la ejecución del codigo, si se vuelve a dar click en registrarse solo manda el console.log
     formUpdate = true;
-  } else {
-    showErrorAlert();
+
+    //Se trata cada caso particular de las validaciones con mensajes de error
+  } else if (
+    !validateUserName(dataObject) ||
+    !validateUserLastName(dataObject) ||
+    !validateUserPhone(dataObject) ||
+    !validateUserEmail(dataObject) ||
+    !validateUserPassword(dataObject)
+  ) {
+    // Mostrar mensajes específicos por cada campo que falle
+    if (!validateUserName(dataObject)) {
+      showFieldError("El nombre no es válido. Asegúrate de usar solo letras.");
+    }
+    if (!validateUserLastName(dataObject)) {
+      showFieldError(
+        "El apellido no es válido. Asegúrate de usar solo letras."
+      );
+    }
+    if (!validateUserPhone(dataObject)) {
+      showFieldError(
+        "El número de teléfono debe contener exactamente 10 dígitos."
+      );
+    }
+    if (!validateUserEmail(dataObject)) {
+      showFieldError("El correo electrónico no tiene un formato válido.");
+    }
+    if (!validateUserPassword(dataObject)) {
+      showFieldError(
+        "La contraseña debe tener al menos 10 caracteres, incluir una letra mayúscula, un número y un carácter especial."
+      );
+    }
     return;
   }
 });
@@ -56,14 +85,14 @@ function showUserInfo(dataObject) {
   `;
   regForm.insertAdjacentHTML("afterend", alert);
 }
-//Alerta cuando algun dato no pasa las validaciones
-function showErrorAlert() {
+//Función que muestra los distintos mensajes de error para cada validación
+function showFieldError(message) {
   const alert = `
       <div class="alert alert-danger mt-2" role="alert">
-        <p>Algo salio mal</p>
+        <p>${message}</p>
       </div>
   `;
-  regForm.insertAdjacentHTML("afterbegin", alert);
+  regForm.insertAdjacentHTML("beforeend", alert);
 }
 
 //Eliminar alerta de error al hacer clic en cualquier campo del formulario
