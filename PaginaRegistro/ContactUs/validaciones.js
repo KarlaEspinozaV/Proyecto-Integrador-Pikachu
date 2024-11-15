@@ -1,9 +1,17 @@
 const regForm = document.getElementById("input-registro");
 console.log(regForm);
 
+let formUpdate = false; //Variable para validar que solo se ejecute unavez el codigo una vez pasadas las validaciones
+
 regForm.addEventListener("submit", (event) => {
   event.preventDefault(); // Evita el envío automático del formulario
   console.log(event);
+
+  //validación para que solo se ejecute una vez el codigo una vez pasadas las validaciones usando un valor boolean
+  if (formUpdate) {
+    console.log("Formulario ya enviado correctamente.");
+    return;
+  }
 
   // Obtener valores de los campos
   const nombreF = event.target.elements["nombreForm"].value.trim();
@@ -29,6 +37,8 @@ regForm.addEventListener("submit", (event) => {
     validateUserPassword(dataObject)
   ) {
     showUserInfo(dataObject);
+    //la variable lanza true y detiene la ejecución del codigo, si se vuelve a dar click en registrarse solo manda el console.log
+    formUpdate = true;
   } else {
     showErrorAlert();
     return;
