@@ -19,34 +19,43 @@ regForm.addEventListener("submit", (event) => {
   const numTelefono = event.target.elements["telefon"].value.trim();
   const correo = event.target.elements["email"].value.trim();
   const contrasena = event.target.elements["contra"].value;
+  const checkPolicy = event.target.elements["check"].value;
   //Pruebas para saber que si se está ejecutando
   console.log("name: ", nombreF);
   console.log("last-name: ", apellido);
   console.log("phone: ", numTelefono);
   console.log("email: ", correo);
   console.log("password: ", contrasena);
+  console.log("checkbox listo ", checkPolicy);
 
   //Validando validaciones
   const data = [...new FormData(regForm)];
   const dataObject = Object.fromEntries(data);
-  if (
+  const isValidForm =
     validateUserName(dataObject) &&
     validateUserLastName(dataObject) &&
     validateUserPhone(dataObject) &&
     validateUserEmail(dataObject) &&
-    validateUserPassword(dataObject)
-  ) {
-    showUserInfo(dataObject);
-    //la variable lanza true y detiene la ejecución del codigo, si se vuelve a dar click en registrarse solo manda el console.log
-    formUpdate = true;
+    validateUserPassword(dataObject) &&
+    validatePrivacyPolicyCheckbox(dataObject);
 
-    //Se trata cada caso particular de las validaciones con mensajes de error
+  // Si todo es válido
+  if (isValidForm) {
+    formUpdate = true; // Evita el reenvío del formulario
+
+    //Envía los datos correo y contraseña al LocalStorage
+    localStorage.setItem("email", JSON.stringify(correo));
+    localStorage.setItem("contra", JSON.stringify(contrasena));
+
+    showUserInfo(dataObject); //Muestra mensaje de aceptación de los datos
   } else if (
+    //Se trata cada caso particular de las validaciones con mensajes de error
     !validateUserName(dataObject) ||
     !validateUserLastName(dataObject) ||
     !validateUserPhone(dataObject) ||
     !validateUserEmail(dataObject) ||
-    !validateUserPassword(dataObject)
+    !validateUserPassword(dataObject) ||
+    !validatePrivacyPolicyCheckbox(dataObject)
   ) {
     // Mostrar mensajes específicos por cada campo que falle
     if (!validateUserName(dataObject)) {
@@ -68,6 +77,11 @@ regForm.addEventListener("submit", (event) => {
     if (!validateUserPassword(dataObject)) {
       showFieldError(
         "La contraseña debe tener al menos 10 caracteres, incluir una letra mayúscula, un número y un carácter especial."
+      );
+    }
+    if (!validatePrivacyPolicyCheckbox(dataObject)) {
+      showFieldError(
+        "Asegurate de aceptar las políticas de privacidad para continuar."
       );
     }
     return;
@@ -95,7 +109,7 @@ function showFieldError(message) {
   regForm.insertAdjacentHTML("beforeend", alert);
 }
 
-//Eliminar alerta de error al hacer clic en cualquier campo del formulario
+//Elimina las  alertas de error al hacer clic en cualquier campo  del form
 const formFields = regForm.querySelectorAll("input");
 formFields.forEach((field) => {
   field.addEventListener("click", () => {
@@ -142,4 +156,9 @@ function validateUserLastName(dataObject) {
   return isValidLastName;
 }
 
-//falta que al pasar las validaciones el codigo se ejecute solo una vez, aunque se presione el boton registrarse nuevamente
+//Validación del check box de politicas de privacidad
+function validatePrivacyPolicyCheckbox(dataObject) {
+  // Verifica si el checkbox fue marcado
+  const isCheckboxChecked = dataObject.check;
+  return isCheckboxChecked;
+}
