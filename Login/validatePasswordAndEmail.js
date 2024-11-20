@@ -1,6 +1,28 @@
 const userEmailText = document.querySelector("#email");
 const userPasswordText = document.querySelector("#password");
 const buttonLogin = document.querySelector("#button-login");
+const singUpForm = document.querySelector("#singup_form")
+
+singUpForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    const userName = document.querySelector("#username")
+    const userEmail = document.querySelector("#email")
+    const userPassword = document.querySelector("#password")
+
+
+    const users =JSON.parse(localStorage.getItem('users')) || [];
+    const isUserRegistered = users.find(users => users.mail === userEmail);
+        if (isUserRegistered){
+            return window.alert("El usuario ya esta registrado")
+        }else
+    
+        users.push({name: userName, mail: userEmail, password: userPassword  })
+        localStorage.setItem('users', JSON.stringify(users))
+        alert("Registro exitoso")
+        window.location.href="index.html"
+
+})
+
 
 function validatePassword() {
     let userPassword = document.getElementById('password').value;
@@ -26,12 +48,15 @@ buttonLogin.addEventListener("click", (e) => {
    
     if (regexEmail.test(userEmail) && validatePassword()) {
         localStorage.setItem("email", JSON.stringify(userEmail)); 
-        localStorage.setItem("password", JSON.stringify(userPassword));   
+        localStorage.setItem("password", JSON.stringify(userPassword));
+        alert("Registro exitoso")
+        window.location.href = "Login\index.html"   
     } else {
         messageElementInEmail.textContent = 'Introduce un correo electrónico válido.';
         messageElementInEmail.style.color = 'red';
-        window.alert("Introduce un correo o contraseña validos")
+        
         return; 
     }
 });
+
 

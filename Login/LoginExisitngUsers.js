@@ -1,17 +1,16 @@
-const userEmail1 = document.querySelector("#email");
-const userPassword1 = document.querySelector("#password");
-const buttonLogin1 = document.querySelector("#button-login");
+const LoginForm = document.querySelector("login-form")
+LoginForm.addEventListener('submit', (e) =>{
+    e.preventDefault()
+    const email = document.querySelector('#email').value
+    const password = document.querySelector('#password').value
+    const Users = JSON.parse(localStorage.getItem('email', 'password')) || []
+    const validUser = Users.find(user => user.email === email && user.password === password)
 
-buttonLogin1.addEventListener("click", () => {
-    const userEmailLogIn = userEmail1.value;
-    const userPasswordLogIn = userPassword1.value;
-    const userEmailStoraged = localStorage.getItem('email');
-    const userPasswordStoraged = localStorage.getItem('password');
-    
-    // Compara si los valores ingresados coinciden con los almacenados
-    if (userEmailLogIn === userEmailStoraged && userPasswordLogIn === userPasswordStoraged) {
-        window.alert("Correo electrónico o contraseña incorrectos.");
-    } else {
-        alert('¡Bienvenido de nuevo!');
+    if(!validUser){
+        return alert('Usuario y/o contraseña incorrecta.')
     }
-});
+    alert(`Bienvenido ${validerUser.name}`)
+    window.location.href = "index.hmtl"
+
+
+})
