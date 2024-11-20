@@ -4,7 +4,8 @@ const articulos = [
             "name": "Collar Reflectante para Perros",
             "img": "imgs/img1.png",
             "precio": 150,
-            "description": "Collar de seguridad para perros, ideal para paseos nocturnos con cinta reflectante de alta visibilidad."
+            "description": "Collar de seguridad para perros, ideal para paseos nocturnos con cinta reflectante de alta visibilidad.",
+            "talla": "CH M G"
           },
           {
             id:2,
