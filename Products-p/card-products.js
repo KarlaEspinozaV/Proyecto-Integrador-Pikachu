@@ -8,6 +8,7 @@ async function fetchAndDisplayProducts() {
 
 		const data = await response.json();
 		const productsArray = data.articulos;
+    console.log(productsArray)
 
 		showAllProducts(productsArray);
 	} catch (error) {
