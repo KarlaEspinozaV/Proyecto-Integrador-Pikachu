@@ -5,54 +5,66 @@ main {
 	min-height: 100vh;
 	padding: 0;
 	margin: 0;
-	background-color: #fdf280;
+	gap: 15px;
+	background: rgb(253, 242, 112);
+	background: linear-gradient(
+		77deg,
+		rgba(253, 242, 112, 1) 25%,
+		rgba(120, 136, 198, 1) 69%,
+		rgba(39, 48, 84, 1) 100%
+	);
 }
 
-.container-home {
-	max-width: 75%;
-	min-height: 50%;
+#container-home {
 	display: flex;
-	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
-	position: relative;
 }
-
 .text-home {
-	border-radius: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: rgb(39, 48, 84) 0px 5px 15px;
+	box-shadow: #273054;
 	background-color: #7888c6;
-	color: white;
-	padding: 20px;
-	width: 350px;
-	height: 190px;
+	padding: 50px;
+	border-radius: 20px;
+	gap: 5em;
 	position: relative;
-	top: -20px; /* Ajusta la posición verticalmente */
-	left: 30px; /* Ajusta la posición horizontalmente */
-	z-index: 1; /* Asegura que el texto esté encima de la imagen */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	left: 5%;
 }
 
-.text-home h2 {
-	font-size: 1.5rem;
-	margin: 0;
+.carousel {
+	width: 600px; /* Tamaño fijo del carrusel */
+	height: 350px;
+	overflow: hidden; /* Evita desbordamientos */
+	margin: 0 auto;
 }
 
-.text-home button {
-	border: 0;
-	border-radius: 10px;
-	color: white;
-	background-color: rgba(217, 98, 159, 0.34);
-	height: 40px;
-	margin: 15px;
-	margin-top: 30px;
+.carousel-inner img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+	transition: none !important; /* Sin animaciones */
+}
+
+.carousel-item {
+	transition: none !important; /* Sin transiciones de Bootstrap */
 }
 
 .img-home {
-	width: 400px;
+	width: 50%; /* Ajusta el ancho según sea necesario */
+	text-align: right; /* Opcional, alinea la imagen al lado derecho */
 }
 .img-home img {
-	width: 100%;
-	border-radius: 10px;
-	object-fit: cover;
+	max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10%;
+	box-shadow: rgb(39, 48, 84) 0px 5px 10px;
+	box-shadow: #273054;
 }
 @media (max-width: 768px) {
 	.container-home {
