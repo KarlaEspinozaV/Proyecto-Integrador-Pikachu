@@ -1,3 +1,5 @@
+import { productController } from "./js/itemsController.js";
+
 const URL_JSON = "./Assets/articulos.json";
 const mainContainer = document.querySelector(".container-j .row");
 
@@ -9,6 +11,16 @@ async function fetchAndDisplayProducts() {
 		const data = await response.json();
 		const productsArray = data.articulos;
     console.log(productsArray)
+
+    // for(let i=0; i< productsArray.lenght; i ++){
+    //   productController.addItem(productsArray[i].name, productsArray[i].description, productsArray[i].precio, productsArray[i].url);
+    // }
+    // console.log(productController.getItems);
+
+    productsArray.forEach((product) =>{
+      productController.addItem(product.name, product.description, product.precio, product.url);
+    })
+    console.log(productController.getItems);
 
 		showAllProducts(productsArray);
 	} catch (error) {

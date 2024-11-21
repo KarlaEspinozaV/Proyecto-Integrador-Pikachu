@@ -1,4 +1,4 @@
-import { productController } from "./itemsController";
+import { productController } from "./itemsController.js";
 
 const productName = document.getElementById('productName');
 const description = document.getElementById('productDescription');
