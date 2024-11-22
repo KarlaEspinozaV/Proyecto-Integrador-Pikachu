@@ -20,9 +20,9 @@ async function fetchAndDisplayProducts() {
     productsArray.forEach((product) =>{
       productController.addItem(product.name, product.description, product.precio, product.url);
     })
-    console.log(productController.getItems);
+    console.log(productController.items);
 
-		showAllProducts(productsArray);
+		showAllProducts(productController.getItems);
 	} catch (error) {
 		console.log("Error:", error);
 	}
@@ -45,7 +45,7 @@ function showAllProducts(productsArray) {
 		const img = document.createElement("img");
 		img.classList.add("card-img-top");
 		img.id = "img-product";
-		img.src = product.url; // Aquí se usa la URL del JSON
+		img.src = product.img; // Aquí se usa la URL del JSON
 		img.alt = product.name;
 
 		// Crear el cuerpo de la tarjeta
@@ -63,7 +63,7 @@ function showAllProducts(productsArray) {
 		const price = document.createElement("p");
 		price.classList.add("card-text");
 		price.id = "precio";
-		price.textContent = product.precio;
+		price.textContent = product.price;
 
 		// Crear y configurar la descripción
 		const description = document.createElement("p");
