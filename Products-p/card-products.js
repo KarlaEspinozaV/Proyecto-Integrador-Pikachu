@@ -1,3 +1,5 @@
+import { productController } from "./js/itemsController.js";
+
 const URL_JSON = "./Assets/articulos.json";
 const contenedorTarjetas = document.getElementById("productos-container");
 
@@ -9,7 +11,7 @@ async function fetchAndDisplayProducts() {
 		const data = await response.json();
 		const productsArray = data.articulos;
 
-		crearTarjetasArticulosInicio(productsArray);
+		showAllProducts(productsArray);
 	} catch (error) {
 		console.log("Error:", error);
 	}
