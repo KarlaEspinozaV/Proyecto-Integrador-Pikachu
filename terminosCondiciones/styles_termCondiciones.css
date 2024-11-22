@@ -1,0 +1,113 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #fdf270;
+}
+
+@media (max-width: 768px) {
+  .container-home {
+    flex-direction: column; /* Cambia la disposición a columna */
+    justify-content: center;
+    align-items: center; /* Alinea los elementos al centro */
+    max-width: 90%; /* Ajusta el ancho */
+  }
+
+  .img-home {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+    max-width: 300px; /* Limita el tamaño de la imagen en móviles */
+    order: 1; /* Asegura que la imagen aparezca primero */
+  }
+
+  .text-home {
+    width: 100%; /* Ajusta el ancho del texto */
+    max-width: 250px; /* Limita el ancho del texto en móviles */
+    height: auto; /* Permite que el contenedor de texto ajuste su altura */
+    margin-top: 20px; /* Añade un espacio entre la imagen y el texto */
+    order: 2; /* Asegura que el texto aparezca después de la imagen */
+    top: -55px;
+    left: auto;
+    position: relative; /* Cambia a posición estática para evitar superposiciones */
+  }
+}
+
+/* Sección Términos y Condiciones */
+.terms-and-conditions {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+.terms-and-conditions h1 {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2rem;
+  border-radius: 8px 8px 0 0;
+  margin: -20px -20px 20px -20px;
+}
+
+.terms-and-conditions article {
+  margin-bottom: 20px;
+}
+
+.terms-and-conditions h2 {
+  color: #007bff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.terms-and-conditions h2 i {
+  margin-right: 10px;
+}
+
+.terms-and-conditions ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.terms-and-conditions ul li {
+  margin: 5px 0;
+  list-style: none;
+  position: relative;
+}
+
+.terms-and-conditions ul li:before {
+  content: "\f00c"; /* Font Awesome checkmark icon */
+  font-family: "Font Awesome 5 Free";
+  margin-right: 8px;
+  color: #007bff;
+  font-weight: 900;
+}
+
+.terms-and-conditions p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Botón de contacto opcional */
+.terms-and-conditions .contact-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.terms-and-conditions .contact-btn:hover {
+  background-color: #0056b3;
+}
