@@ -1,3 +1,5 @@
+import { productController } from "./js/itemsController.js";
+
 const URL_JSON = "./Assets/articulos.json";
 const mainContainer = document.querySelector(".container-j .row");
 
@@ -8,8 +10,19 @@ async function fetchAndDisplayProducts() {
 
 		const data = await response.json();
 		const productsArray = data.articulos;
+    console.log(productsArray)
 
-		showAllProducts(productsArray);
+    // for(let i=0; i< productsArray.lenght; i ++){
+    //   productController.addItem(productsArray[i].name, productsArray[i].description, productsArray[i].precio, productsArray[i].url);
+    // }
+    // console.log(productController.getItems);
+
+    productsArray.forEach((product) =>{
+      productController.addItem(product.name, product.description, product.precio, product.url);
+    })
+    console.log(productController.items);
+
+		showAllProducts(productController.getItems);
 	} catch (error) {
 		console.log("Error:", error);
 	}
@@ -32,7 +45,7 @@ function showAllProducts(productsArray) {
 		const img = document.createElement("img");
 		img.classList.add("card-img-top");
 		img.id = "img-product";
-		img.src = product.url; // Aquí se usa la URL del JSON
+		img.src = product.img; // Aquí se usa la URL del JSON
 		img.alt = product.name;
 
 		// Crear el cuerpo de la tarjeta
@@ -50,7 +63,7 @@ function showAllProducts(productsArray) {
 		const price = document.createElement("p");
 		price.classList.add("card-text");
 		price.id = "precio";
-		price.textContent = product.precio;
+		price.textContent = product.price;
 
 		// Crear y configurar la descripción
 		const description = document.createElement("p");
