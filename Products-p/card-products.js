@@ -9,7 +9,7 @@ async function fetchAndDisplayProducts() {
 		const data = await response.json();
 		const productsArray = data.articulos;
 
-		showAllProducts(productsArray);
+		crearTarjetasArticulosInicio(productsArray);
 	} catch (error) {
 		console.log("Error:", error);
 	}
@@ -28,8 +28,7 @@ function crearTarjetasArticulosInicio(productos) {
         `;
 		contenedorTarjetas.appendChild(nuevoArticulo);
 	});
+	crearTarjetasArticulosInicio(articulos);
 }
-
-crearTarjetasArticulosInicio(articulos);
 
 fetchAndDisplayProducts();
