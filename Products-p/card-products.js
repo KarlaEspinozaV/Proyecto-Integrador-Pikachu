@@ -11,7 +11,17 @@ async function fetchAndDisplayProducts() {
 		const data = await response.json();
 		const productsArray = data.articulos;
 
-		showAllProducts(productsArray);
+		productsArray.forEach((product) => {
+			productController.addItem(
+				product.name,
+				product.description,
+				product.precio,
+				product.url,
+			);
+		});
+		console.log(productController);
+
+		crearTarjetasArticulosInicio(productController.getItems);
 	} catch (error) {
 		console.log("Error:", error);
 	}
