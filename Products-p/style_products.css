@@ -76,6 +76,14 @@ h3 {
 	margin: 6px 0;
 }
 
+.button-tarjeta-productos{
+  background-color: #273054;
+	color: white;
+	padding: 3px 10px;
+	border: unset;
+	border-radius: 5px;
+}
+
 #button-tarjeta {
 	background-color: #273054;
 	color: white;

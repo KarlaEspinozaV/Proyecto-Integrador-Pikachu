@@ -1,3 +1,5 @@
+import {editarProducto } from "./editElement.js";
+
 function crearTarjetasArticulosInicio(productos) {
   const contenedorTarjetas = document.getElementById("productos-container");
   contenedorTarjetas.innerHTML = "";
@@ -9,10 +11,17 @@ function crearTarjetasArticulosInicio(productos) {
         <h3>${producto.name}</h3>
         <h5>$${producto.price}</h5>
         <p>${producto.description}</p>
-        <button id = "button-tarjeta">Editar</button>
-        <button id = "button-tarjeta">Eliminar</button>
+        <button class = "button-tarjeta-productos" id="editar-${producto.id}" >Editar</button>
+        <button class = "button-tarjeta-productos" id="eliminar-${producto.id}">Eliminar</button>
         `;
 		contenedorTarjetas.appendChild(nuevoArticulo);
+
+    document.getElementById(`editar-${producto.id}`).addEventListener("click", (e) =>{
+      e.preventDefault();
+      editarProducto(producto.id);
+    }
+  );
+
 	});
 }
 
