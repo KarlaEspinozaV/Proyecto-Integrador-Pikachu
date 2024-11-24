@@ -46,11 +46,18 @@ main {
 
 #productos-container {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: wrap !important;
 	gap: 20px;
 	justify-content: center;
 	/* max-width: 800px; */
 	margin: auto;
+	background: rgb(253, 242, 112);
+	background: linear-gradient(
+		77deg,
+		rgba(253, 242, 112, 1) 25%,
+		rgba(120, 136, 198, 1) 69%,
+		rgba(39, 48, 84, 1) 100%
+	);
 }
 
 .tarjeta-producto {
@@ -82,11 +89,6 @@ h3 {
 	padding: 3px 10px;
 	border: unset;
 	border-radius: 5px;
-}
-
-#productos-container {
-	width: 300px;
-	margin: auto;
 }
 
 /* .tarjeta-producto{

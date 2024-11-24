@@ -5,17 +5,16 @@
 }
 
 
-#filtro-container{
-    margin: 5px;
-    border: 2px solid black;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    width: 99%;
-    height: 50px;
-    position: static;
+#filter-container {
+        position: top; /* Asegura que el contenedor se comporte normalmente */
+        top: 0;  /* Coloca el filtro en la parte superior */
+        left: 0;
+        width: 100%; /* Ocupa todo el ancho disponible */
+        background-color: #fff; /* Fondo blanco para los filtros */
+        padding: 10px 20px; /* Espaciado alrededor de los filtros */
+        z-index: 10; /* Asegura que el filtro esté sobre otros elementos si es necesario */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sut*/
 }
-
 
 #dropdown-container{
     justify-content: space-evenly;
