@@ -1,4 +1,5 @@
 import { productController } from "./itemsController.js";
+import { crearTarjetasArticulosInicio } from "./crearTarjetasArticulosInicio.js";
 
 const productName = document.getElementById('productName');
 const description = document.getElementById('productDescription');
@@ -16,6 +17,7 @@ document.getElementById('addProductButton').addEventListener('click', async () =
 
   // Si la validación pasa, entonces se agrega el producto
   productController.addItem(productName.value, description.value, price.value, imageAsBase64Url);
+  crearTarjetasArticulosInicio(productController.getItems);
 
   // Limpiar el formulario después de agregar el producto
   productName.value = '';
