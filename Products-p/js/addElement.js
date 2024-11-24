@@ -16,7 +16,24 @@ document.getElementById('addProductButton').addEventListener('click', async () =
   }
 
   // Si la validación pasa, entonces se agrega el producto
-  productController.addItem(productName.value, description.value, price.value, imageAsBase64Url);
+  if (productController.getItemEdit) {
+    console.log("modo editar");
+    console.log(productController.getItemEdit);
+    //const isSaved =
+    productController.updateItem(productController.getItemEdit.id,
+      {
+        id: productController.getItemEdit.id,
+        name: productName.value,
+        description: description.value,
+        price: price.value,
+        img: imageAsBase64Url
+      }
+    );
+    productController.setItemEdit = undefined;
+  } else {
+    await productController.addItem(productName.value, description.value, price.value, imageAsBase64Url);
+  }
+
   crearTarjetasArticulosInicio(productController.getItems);
 
   // Limpiar el formulario después de agregar el producto

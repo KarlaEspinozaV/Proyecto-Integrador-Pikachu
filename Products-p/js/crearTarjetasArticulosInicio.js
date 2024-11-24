@@ -18,7 +18,7 @@ function crearTarjetasArticulosInicio(productos) {
 
     document.getElementById(`editar-${producto.id}`).addEventListener("click", (e) =>{
       e.preventDefault();
-      editarProducto(producto.id);
+      editarProducto(producto);
     }
   );
 
