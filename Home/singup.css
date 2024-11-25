@@ -1,5 +1,3 @@
-
-
 .modal{
     position: fixed;
     top:0;
@@ -24,7 +22,6 @@
     border-radius: 6px;
     padding: 3em 2.5em;
     display: grid; 
-    gap: 1em;
     place-items: center;
     grid-auto-columns: 100%;
     justify-content: center;
@@ -42,6 +39,7 @@
 
 
 .modal_title{
+    margin-top: 10px;
     margin-bottom: 10px;
     font-size: 20px;
     
@@ -76,7 +74,6 @@
     margin-bottom: 10px;
 }
 
-
 .email_form{
     width: 100%;
 }
@@ -91,13 +88,11 @@
 }
 
 #loginForm{
-   background-color: #fff;
+   background-color: #090808;
    width: 90%;
    height: 100%;
-   border: 3px solid black;
-   border-radius: 3dvh;
    gap: 2dvh;
-   padding: 2%;
+   padding: 1%;
    display: inline-grid !important;
 
 }
@@ -107,20 +102,28 @@
     flex-wrap: wrap;
 }
 
-#password_singup{
-    width: 99%;
+#password_singup, #email, #name {
+    width: 100%;
+    border-radius: 10px;  
+    border-color: rgb(rgb(179, 179, 179), green, blue);
+    
 }
 
-#email{
-    width: 99%;
+#password_singup:hover, #email:hover, #name:hover {
+    transition: .9s;
+    background-color:#a6b4ea ; /* Color de fondo cuando se hace hover */
 }
 
-#name{
-    width: 99%;
+.submit-form{
+    border-radius: 10px;
+  
 }
 
-#inregraLink{
-    text-decoration: none;
-    transition: backgroud-color .3s;
-    transition:  opasity .6s;
+
+.submit-form:hover{
+    transition: .5s;
+    border-color: rgb(49, 112, 230);
+    background-color: rgb(49, 112, 230);
+    border-radius: 10px;
+    
 }

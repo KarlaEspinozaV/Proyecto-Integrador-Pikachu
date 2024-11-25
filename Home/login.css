@@ -95,7 +95,6 @@
    background-color: #fff;
    width: 90%;
    height: 100%;
-   border: 3px solid black;
    border-radius: 3dvh;
    gap: 2dvh;
    padding: 2%;
@@ -108,14 +107,8 @@
     flex-wrap: wrap;
 }
 
-#password_login{
+#password_singup, #email, #name {
     width: 99%;
 }
 
-#email{
-    width: 99%;
-}
 
-#name{
-    width: 99%;
-}
