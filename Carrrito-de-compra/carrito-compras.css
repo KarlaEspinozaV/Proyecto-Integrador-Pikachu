@@ -1,110 +1,139 @@
-/*a{
-    text-decoration: none !important;
-    color: black !important;
-}
-
-a:hover{
-    color: ;
-}*/
+/* Estilos para los iconos del carrito */
 #all-icon-container > .cart-logo {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 }
 
-#all-icon-container > .cart-logo :hover {
-	color: #f47c98;
+#all-icon-container > .cart-logo:hover {
+    color: #f47c98;
 }
+
 #all-icon-container > .cart-logo > #cuenta-carrito {
-	background-color: #118ab2;
-	border-radius: 100%;
-	display: inline-block;
-	width: 20px;
-	line-height: 20px; /*Para que el contador quede centrado verticalmente*/
-	text-align: center;
-	position: absolute;
+    background-color: #118ab2;
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    line-height: 20px; /* Para que el contador quede centrado verticalmente */
+    text-align: center;
+    position: absolute;
 }
 
 #all-icon-container-responsive > .cart-logo > #cuenta-carrito-responsive {
-	background-color: #118ab2;
-	border-radius: 100%;
-	display: inline-block;
-	width: 20px;
-	line-height: 20px;
-	text-align: center;
-	position: absolute;
-	color: black;
+    background-color: #118ab2;
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    color: black;
 }
 
+/* Estilo para el contenedor de los productos */
 #productos-container {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	justify-content: center;
-	/* max-width: 800px; */
-	margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: auto;
 }
 
+/* Estilos para las tarjetas de productos */
 .tarjeta-producto {
-	width: 400px;
-	text-align: center;
-	background-color: #f47c98;
-	padding: 20px;
-	box-shadow: 0 0 10px #273054;
-	transition: 200ms;
+    width: 400px;
+    text-align: center;
+    background-color: #f47c98;
+    padding: 20px;
+    box-shadow: 0 0 10px #273054;
+    transition: 200ms;
 }
 
 .tarjeta-producto:hover {
-	translate: 0 -10px;
-	box-shadow: 0 10px 10px #273054;
+    translate: 0 -10px;
+    box-shadow: 0 10px 10px #273054;
 }
 
+/* Imagen dentro de la tarjeta de producto */
 .tarjeta-producto img {
-	width: 100%;
-	/* aspect-ratio: 1; */ /*Por si las imagenes tuveran distintos tamaños*/
+    width: 100%;
+    /* aspect-ratio: 1; */ /* Por si las imágenes tienen distintos tamaños */
 }
 
+/* Estilos para los títulos */
 h3 {
-	margin: 6px 0;
+    margin: 6px 0;
 }
 
+/* Estilo del botón dentro de las tarjetas de productos */
 #button-tarjeta {
-	background-color: #273054;
-	color: white;
-	padding: 3px 10px;
-	border: unset;
-	border-radius: 5px;
+    background-color: #273054;
+    color: white;
+    padding: 8px 15px;
+    border: unset;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
+#button-tarjeta:hover {
+    background-color: #118ab2;
+}
+
+/* Estilos para los botones de cantidad (+ y -) */
+.tarjeta-producto div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.tarjeta-producto button {
+    background-color: #118ab2;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.tarjeta-producto button:hover {
+    background-color: #273054;
+}
+
+/* Estilo general del cuerpo */
 body {
-	background: linear-gradient(
-		77deg,
-		rgba(253, 242, 112, 1) 25%,
-		rgba(120, 136, 198, 1) 69%,
-		rgba(39, 48, 84, 1) 100%
-	) !important;
-	padding-top: 15vh;
-	padding-bottom: 15vh;
+    background: linear-gradient(
+        77deg,
+        rgba(253, 242, 112, 1) 25%,
+        rgba(120, 136, 198, 1) 69%,
+        rgba(39, 48, 84, 1) 100%
+    ) !important;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
 }
 
+/* Estilo de los elementos escondidos */
 .escondido {
-	display: none;
+    display: none;
 }
 
+/* Estilo para el pie de página */
 #footer {
-	position: relative;
-	color: #000000;
-	text-align: center;
-	width: 100%;
-	padding: 20px 50px;
-	background-color: whitesmoke;
-	min-height: 50px;
-	font-size: 0.9rem;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-	bottom: 0;
-	display: flex;
-	grid-column: 1/-1;
-	flex-grow: 1;
-	position: fixed;
+    position: relative;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    padding: 20px 50px;
+    background-color: whitesmoke;
+    min-height: 50px;
+    font-size: 0.9rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+    display: flex;
+    grid-column: 1/-1;
+    flex-grow: 1;
+    position: fixed;
 }
