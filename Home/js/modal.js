@@ -18,7 +18,6 @@ closeModal.addEventListener("click", (e) => {
 singupToLogin.addEventListener("click", (e) => {
     e.preventDefault();
     modal.classList.remove('modal--show')
-    modal.classList.add('modal--showa')
 
 })
 
