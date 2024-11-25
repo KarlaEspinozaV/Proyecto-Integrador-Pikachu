@@ -1,4 +1,4 @@
-import {editarProducto } from "./editElement.js";
+import { editarProducto, eliminarProducto } from "./editElement.js";
 
 function crearTarjetasArticulosInicio(productos) {
   const contenedorTarjetas = document.getElementById("productos-container");
@@ -16,12 +16,15 @@ function crearTarjetasArticulosInicio(productos) {
         `;
 		contenedorTarjetas.appendChild(nuevoArticulo);
 
-    document.getElementById(`editar-${producto.id}`).addEventListener("click", (e) =>{
+    document.getElementById(`editar-${producto.id}`).addEventListener("click", (e) => {
       e.preventDefault();
       editarProducto(producto);
-    }
-  );
+    });
 
+    document.getElementById(`eliminar-${producto.id}`).addEventListener("click", (e) =>{
+      e.preventDefault();
+      eliminarProducto(producto);
+    });
 	});
 }
 

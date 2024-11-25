@@ -14,6 +14,7 @@
   <script defer type="module" src="./js/itemsController.js"></script>
   <script defer type="module" src="./js/addElement.js"></script>
   <script defer type="module" src="./card-products.js"></script>
+  <script defer type="module" src="./js/main.js"></script>
   <title>Products</title>
 </head>
 
@@ -176,14 +177,25 @@
                 <input type="file" class="form-control" id="productImage" accept="image/*" required>
               </div>
               <button id="addProductButton" type="button" class="btn btn-primary w-100">Subir Producto</button>
-              <!-- <button id="addProductButton" type="button" class="btn btn-primary w-100">Editar Producto</button>
-                 <button id="addProductButton" type="button" class="btn btn-primary w-100">Eliminar Producto</button> -->
-              <!-- <a class="btn btn-primary modal_close" href="#" role="button">Link</a> -->
               <a href="#" class="btn modal_close w-100 mt-2">Cerrar</a>
             </form>
           </div>
         </div>
       </section>
+
+      <!--- Modal eliminar ---->
+      <section id="modal-eliminar" class="modal">
+        <div class="modal_container">
+          <div class="row">
+            <h2 class="text-center mb-4">Eliminar</h2>
+            <form id="eliminarForm">
+              <button id="deleteProductButton" type="button" class="btn btn-primary w-100">Confirmar</button>
+              <a href="#" id="closeDelete" class="btn modal_close w-100 mt-2">Cancelar</a>
+            </form>
+          </div>
+        </div>
+      </section>
+
 
       <div id="filtro-container">
 

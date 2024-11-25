@@ -1,3 +1,5 @@
+import { confirmDelete } from "./editElement.js";
+
 const openModal = document.querySelector('.add-product');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal_close');
@@ -12,7 +14,18 @@ closeModal.addEventListener('click', (e)=>{
   modal.classList.remove('modal--show');
 });
 
+const modalEliminar = document.getElementById("modal-eliminar");
+const confirmarEliminar = document.getElementById("deleteProductButton");
+confirmarEliminar.addEventListener("click", (e) => {
+  e.preventDefault();
+  confirmDelete();
+});
 
+const closeDelete = document.getElementById( "closeDelete" );
+closeDelete.addEventListener('click', (e) => {
+  e.preventDefault();
+  modalEliminar.classList.remove('modal--show');
+});
 
 
 // document.addEventListener('DOMContentLoaded', () => {

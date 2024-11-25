@@ -42,6 +42,9 @@ document.getElementById('addProductButton').addEventListener('click', async () =
   price.value = '';
   image.value = '';
 
+  const modal = document.querySelector('.modal');
+  modal.classList.remove('modal--show');
+
   // Imprimir los productos después de agregar uno nuevo
   console.log(productController.getItems);
 });
