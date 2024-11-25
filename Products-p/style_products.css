@@ -55,20 +55,23 @@ h2{
 	flex-wrap: wrap !important;
 	gap: 20px;
 	justify-content: center;
-	/* max-width: 800px; */
+	width: 100%; 
+    max-width: 1200px; /* 1200px para pantallas grandes */
 	margin: auto;
-	width: 300px;
+	/* width: 300px; */
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
 
 .tarjeta-producto {
-	width: 400px;
+	/* width: 400px; */
 	text-align: center;
 	background-color: #f47c98;
 	padding: 20px;
 	box-shadow: 0 0 10px #273054;
 	transition: 200ms;
+	width: calc(33.33% - 20px); /* 3 tarjetas por fila con espacio entre ellas */
+    min-width: 250px; /* Asegura que no se vuelvan demasiado pequeñas */
 }
 
 .tarjeta-producto:hover {
