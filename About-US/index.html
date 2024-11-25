@@ -3,152 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawfect</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="style_header.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style_header.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body style="background-color: #fdf270;">
-    <!-- Navbar -->
+<body>
     <header>
-      <nav id='principal_nav' class="navbar navbar-expand-lg bg-f8f9fa">
-        <div id='main-nav-container' class="container-fluid">
-  
-          <div id="toggler-brand-icons">
-  
-            <div id='container-button-logo' class="container">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <!-- ** -->
-              <div class="d-flex align-items-left">
-                <a href="../Home/index.html"><img id='logo-header'src="./Assets/Logo_Paw.png" alt="Descripción"></a>
-              </div>
-            </div>
-  
-            <!-- * -->
-            <div id='all-icon-container-responsive' class="icon-container">
-  
-              <a href="../Carrrito-de-compra/cart.html">
-              <svg id='cart-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-              </svg></a>
-  
-              <a href="../Login/login.html">
-                <svg id='user-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                </svg></a>
-  
-                <a href="../Home/index.html"> <svg id='home-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                </svg></a>
-  
-            </div>
-  
-          </div>
-  
-  
-          <!-- Custom hover es el elemento creado css que le da la animación a nuestra barra pawfect -->
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-  
-            <!-- * -->
-            <form id='form-search' class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">
-                <svg id='search-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-search" viewBox="0 0 16 16">
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l -3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-              </button>
-            </form>
-  
-  
-            <!-- * -->
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-  
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle custom-hover" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Productos
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="../Products-p/index.html">Perros</a></li>
-                  <li><a class="dropdown-item" href="../Products-p/index.html">Gatos</a></li>
-                  <li><a class="dropdown-item" href="../Products-p/index.html">Otros</a></li>
-                </ul>
-  
-              <li class="nav-item custom-hover"></li>
-              <a id='element-acerca-nosotros' class="nav-link" href="../About-US/index.html">Acerca de nosotros</a>
-  
-              <li class="nav-item custom-hover">
-                <a class="nav-link" href="../ContactUs/index.html">Comunidad</a>
-              </li>
-              </li>
-            </ul>
-  
-          </div>
-  
-  
-          <!-- * -->
-          <div id='all-icon-container' class="icon-container">
-  
-  
-            <a href="../Carrrito-de-compra/cart.html">
-                <svg id='cart-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                  </svg>
-            </a>
-  
-            <a href="../Login/login.html">
-                <svg id='user-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                  </svg>
-  
-            </a>
-  
-            <a href="../Home/index.html">
-                <svg id='home-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
-                  </svg>
-            </a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <div class="main-container">
-        <div class="container-main mx-auto p-5" style="border: 15px solid #7888c6; border-radius: 10px; padding: 50px; background-color: #7888c6;">
-            
-                <h1 style="color: #fdf270;">Acerca de nosotros</h1>
-            
-            
-            <main>
-                <div class="row align-items-center">
-                        <div class="col-12 col-md-2 text-center d-flex flex-column">
-                            <img src="Assets/Perro_1.jpg" alt="" class="img-fluid mb-3">
-                            <img src="Assets/Perro_2.jpg" alt="" class="img-fluid mb-3">
-                    </div>
-                    <div class="col-12 col-md-8 text-center">
-                        <p>En Pawfect, nuestros peluditos son más que mascotas. Son nuestros mejores amigos, nuestros protectores y miembros de nuestra familia. Tienen peculiaridades y un carácter inigualables, y tienen necesidades que les son propias. Por eso trabajamos con tenaz determinación día tras día para proporcionarles los cuidados que necesitan para vivir.</p>
-                        <p>Propocionamos accesorios innovadores y de alta calidad para mascotas, que mejoren su bienestar y fortalecer los vínculos entre las personas y sus mascotas promoviendo un estilo de vida amigable y sostenible.</p>
-                        <p>Queremos convertirnos en la marca líder del mercado de accesorios para mascotas reconocida por su compromiso con el bienestar animal, expandiendo nuestra presencia a nivel nacional.</p>
-                        <img src="Assets/Logo_Paw.png" alt="Logo de la marca" class="img-fluid mt-3">
-                    </div>
-                        <div class="col-12 col-md-2 text-center">
-                            <img src="Assets/Perro_3.jpg" alt="" class="img-fluid mb-3 order-1">
-                            <img src="Assets/Perro_4.jpg" alt="" class="img-fluid mb-3 order-2">
+        <header>
+            <nav id='principal_nav' class="navbar navbar-expand-lg bg-f8f9fa">
+                <div id='main-nav-container' class="container-fluid">
+    
+                    <div id="toggler-brand-icons">
+    
+                        <div id='container-button-logo' class="container">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <!-- ** -->
+                            <div class="d-flex align-items-left">
+                                <a href="index.html">
+    
+    
+                                    <img id='logo-header' src="./Assets/Images/image 1.png" alt="Descripción">
+                                </a>
+    
+                            </div>
                         </div>
+    
+                        <!-- * -->
+                        <div id='all-icon-container-responsive' class="icon-container">
+    
+                            <svg id='cart-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                            </svg>
+    
+                            <svg id='user-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                            </svg>
+    
+                            <a href="./home.html"> <svg id='home-logo' xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                </svg> </a>
+    
+                        </div>
+    
+                    </div>
+    
+    
+                    <!-- Custom hover es el elemento creado css que le da la animación a nuestra barra pawfect -->
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    
+                        <!-- * -->
+                        <form id='form-search' class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">
+                                <svg id='search-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l -3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+                            </button>
+                        </form>
+    
+    
+                        <!-- * -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle custom-hover" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Productos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../Products-p/index.html">Perros</a></li>
+                                    <li><a class="dropdown-item" href="../Products-p/index.html">Gatos</a></li>
+                                    <li><a class="dropdown-item" href="../Products-p/index.html">Otros</a></li>
+                                </ul>
+    
+                            <li class="nav-item custom-hover"></li>
+                            <a id='element-acerca-nosotros' class="nav-link" href="../About-US/index.html">Acerca de
+                                nosotros</a>
+    
+                            <li class="nav-item custom-hover">
+                                <a class="nav-link" href="../ContactUs/index.html">Comunidad</a>
+                            </li>
+                            </li>
+                        </ul>
+    
+                    </div>
+    
+    
+                    <!-- * -->
+                    <div id='all-icon-container' class="icon-container">
+    
+    
+                        <a href="../Carrrito-de-compra/cart.html">
+                            <svg id='cart-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                            </svg>
+                        </a>
+    
+                        <a href="../Login/login.html">
+                            <svg id='user-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                            </svg>
+    
+                        </a>
+    
+                        <a href="../Home/index.html">
+                            <svg id='home-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </main>
+            </nav>
+        </header>
+    </header>
+    <main>
+        <div class="text-center my-4">
+            <h1>Quienes somos</h1>
+            <p class="lead">Somos Pawfect. Una página que esta 100% dedicada al cuidado de los peluditos.</p>
+            <p>Nuestros peluditos son más que mascotas. Son nuestros mejores amigos, nuestros protectores y miembros de nuestra familia. Tienen peculiaridades y un carácter inigualables, y tienen necesidades que les son propias. Por eso trabajamos con tenaz determinación día tras día para proporcionarles los cuidados que necesitan para vivir.</p>
+            <p>Queremos ser... <strong>“Tu mejor amigo”</strong></p>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Footer -->
-    <footer class="text-center py-3" style="background-color: white; width: 100%; justify-content: center;">
-        <p>&copy; 2024 Pawfect. All rights reserved.</p>
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <img src="./Assets/Images/imagen1.jpg" alt="Mujer en tienda de mascotas" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-primary">Nuestros servicios</h2>
+                    <p>Propocionamos accesorios innovadores y de alta calidad para mascotas, que mejoren su bienestar y fortalecer los vínculos entre las personas y sus mascotas promoviendo un estilo de vida amigable y sostenible.</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2">
+                    <img src="./Assets/Images/imagen2.jpg" alt="Asesorando en tienda de mascotas" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2 class="text-primary">Nuestra identidad</h2>
+                    <p>Queremos convertirnos en la marca líder del mercado de accesorios para mascotas reconocida por su compromiso con el bienestar animal, expandiendo nuestra presencia a nivel nacional.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Sección del equipo-->
+        <div class="container my-5">
+            <h2 class="text-center text-primary mb-4">Conoce a nuestro equipo</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" *ngFor="let miembro de equipo">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./Assets/Images/equipo1.jpg" class="card-img-top" alt="Foto del equipo">
+                        <div class="card-body">
+                            <h5 class="card-title">Martha Huerta</h5>
+                            <p class="card-text">Soy Martha, me considero una persona comprometida y amigable. Conocí a mis perrhijas en el 2017 y desde entonces, han cambiado mi vida.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" *ngFor="let miembro de equipo">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./Assets/Images/equipo2.jpg" class="card-img-top" alt="Foto del equipo">
+                        <div class="card-body">
+                            <h5 class="card-title">Edgar Lee</h5>
+                            <p class="card-text">Soy Edgar me considero  comprometido y responsable con mi trabajo. También soy el orgulloso dueño de dos hermosos perros; Pulgas y Spike.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" *ngFor="let miembro de equipo">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./Assets/Images/equipo3.jpg" class="card-img-top" alt="Foto del equipo">
+                        <div class="card-body">
+                            <h5 class="card-title">Leonardo Flores</h5>
+                            <p class="card-text">Ingeniero con experiencia en el desarrollo web. “Apasionado por el bienestar y cuidado de tus macotas”.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" *ngFor="let miembro de equipo">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./Assets/Images/equipo4.jpg" class="card-img-top" alt="Foto del equipo">
+                        <div class="card-body">
+                            <h5 class="card-title">Karla Espinoza</h5>
+                            <p class="card-text">Soy Karla, soy alegre, risueña y adoro pasar tiempo con los animales, en especial con Kai y Daga que son mis mascotas y mi entera adoración.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" *ngFor="let miembro de equipo">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./Assets/Images/equipo5.jpg" class="card-img-top" alt="Foto del equipo">
+                        <div class="card-body">
+                            <h5 class="card-title">Irving Neria</h5>
+                            <p class="card-text">Desarrollador Full Stack enfocado en soluciones tecnológicas innovadoras y sostenibles, diseñadas para resolver problemas prácticos de alto impacto y generar valor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" *ngFor="let miembro de equipo">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./Assets/Images/equipo6.jpg" class="card-img-top" alt="Foto del equipo">
+                        <div class="card-body">
+                            <h5 class="card-title">Gerardo Avalos</h5>
+                            <p class="card-text">Soy amante de la biología, la tecnología y los animales. Hablo inglés y francés, disfruto leer y escuchar música, y tengo cinco perritos que me acompañan en la vida.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" *ngFor="let miembro de equipo">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./Assets/Images/equipo7.jpg" class="card-img-top" alt="Foto del equipo">
+                        <div class="card-body">
+                            <h5 class="card-title">Luis Gallardo</h5>
+                            <p class="card-text">Soy Luis, soy amante de los lomitos y me encanta salir a correr con Nasus y Bantha que son mis mejores amigos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <ul class="footerMenu">
+            <li class="footerMenu-elem">
+                <a href="" class="footerMenu-icon">Home</a>
+            </li>
+            <li class="footerMenu-elem">
+                <a href="" class="footerMenu-icon">Acerca de Nosotros</a>
+            </li>
+            <li class="footerMenu-elem">
+                <a href="" class="footerMenu-icon">Políticas de Privacidad</a>
+            </li>
+            <li class="footerMenu-elem">
+                <a href="" class="footerMenu-icon">Terminos y condiciones</a>
+            </li>
+        </ul>
+        <p class="footerText">&copy; 2024 Pawfect. All rights reserved.🐾</p>
+
     </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

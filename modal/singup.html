@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="singup.css">
+    <script  defer src="./js/modal.js"></script>
+    <script defer src="./js/singup.js"></script>
+
+
+</head>
+<body>
+
+    <button id="button-modal" type="button" class="btn btn-primary btn-lg">Large button</button>
+
+<div id="modal-form">
+    <section class="modal">
+        <div class="modal-container-register">
+            <img src="modal_login.svg" class="modal_img" alt="imagen de login ">
+            <h2 class="modal_title">Registro</h2>
+            
+            
+        <form id="loginForm">
+            
+            <div id="inputs_form">
+                <div class="nombre_form">
+                    <label>Nombre</label>
+                    <input type="text" placeholder="..." id="name" required autofocus>
+                    </div>
+                    <div class="email_form">
+                        <label>Email</label>
+                        <input type="email" placeholder="..." id="email" required autofocus>
+                    </div>
+                    <div class="password_form">
+                        <label >Contraseña</label>
+                        <input type="password" placeholder="..." id="password" required>
+                    </div>
+                </div>
+                <input class="submit-form" type="submit" value="Registrar">
+                
+                <p>Ya tienes cuenta? <a href="login.html">Ingresa</a></p>
+                
+        </form>
+                
+                <a href="#" class="modal_close">Salir</a>
+            </div>
+        </section>
+        
+</div>
+    
+</body>
+</html>

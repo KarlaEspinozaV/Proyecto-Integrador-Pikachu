@@ -1,11 +1,20 @@
-/*a{
-    text-decoration: none !important;
-    color: black !important;
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	gap: 15px;
+	background: rgb(253, 242, 112);
+	background: linear-gradient(
+		77deg,
+		rgba(253, 242, 112, 1) 25%,
+		rgba(120, 136, 198, 1) 69%,
+		rgba(39, 48, 84, 1) 100%
+	);
 }
 
-a:hover{
-    color: ;
-}*/
 #all-icon-container > .cart-logo {
 	text-decoration: none;
 	color: black;
@@ -67,6 +76,14 @@ h3 {
 	margin: 6px 0;
 }
 
+.button-tarjeta-productos{
+  background-color: #273054;
+	color: white;
+	padding: 3px 10px;
+	border: unset;
+	border-radius: 5px;
+}
+
 #button-tarjeta {
 	background-color: #273054;
 	color: white;
@@ -75,36 +92,26 @@ h3 {
 	border-radius: 5px;
 }
 
-body {
-	background: linear-gradient(
-		77deg,
-		rgba(253, 242, 112, 1) 25%,
-		rgba(120, 136, 198, 1) 69%,
-		rgba(39, 48, 84, 1) 100%
-	) !important;
-	padding-top: 15vh;
-	padding-bottom: 15vh;
+#productos-container {
+	width: 300px;
+	margin: auto;
 }
 
-.escondido {
-	display: none;
-}
+/* .tarjeta-producto{
+    gap: 20px;
+    align-items: center;
+} */
 
-#footer {
-	position: relative;
-	color: #000000;
+/* .tarjeta-producto img{
+    aspect-ratio: 1;
+} */
+
+/* .tarjeta-producto h3{
+    width: 130px;
+    text-align: center;
+} */
+
+#totales,
+#carrito-vacio {
 	text-align: center;
-	width: 100%;
-	padding: 20px 50px;
-	background-color: whitesmoke;
-	min-height: 50px;
-	font-size: 0.9rem;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-	bottom: 0;
-	display: flex;
-	grid-column: 1/-1;
-	flex-grow: 1;
-	position: fixed;
 }

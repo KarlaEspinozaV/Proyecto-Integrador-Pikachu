@@ -1,8 +1,10 @@
 class ProductsController {
+  itemEdit;
   items;
   current_Id;
 
   constructor(currentId = 0){
+    this.itemEdit = undefined;
     this.items = [];
     this.current_Id = currentId;
   }
@@ -13,6 +15,14 @@ class ProductsController {
 
   get getItems() {
     return this.items;
+  }
+
+  set setItemEdit(itemEdit){
+    this.itemEdit = itemEdit;
+  }
+
+  get getItemEdit() {
+    return this.itemEdit;
   }
 
   async addItem(name, description, price, img){
@@ -31,12 +41,18 @@ class ProductsController {
   }
 
   updateItem(id, newData) {
-    const item = this.items.find(item => item.id === id);
+    const index = this.items.findIndex(item => item.id === id);
+    const item = this.items[index];
+    console.log(item);
     if (item) {
       item.name = newData.name || item.name;
       item.description = newData.description || item.description;
       item.price = newData.price || item.price;
       item.img = newData.img || item.img;
+
+      console.log(item);
+
+      this.items[index] = item;
 
       const stringItems = JSON.stringify(this.items);
       localStorage.setItem("Items",stringItems);
@@ -73,7 +89,7 @@ class ProductsController {
             this.items.push(item);
         }
     }
-}
+  }
 }
 
 const productController = new ProductsController();

@@ -1,7 +1,7 @@
-/* header{
-    background-color: white;
-    margin-bottom: 7.5dvh;
-} */
+header {
+  background-color: white;
+  margin-bottom: 0;
+}
 
 #logo-header {
   margin-left: 10px;
@@ -19,9 +19,7 @@ li .nav-link {
   margin: 0;
   font-family: "Roboto", sans-serif;
   background-color: white;
-  position: fixed;
-  top: 0;
-  z-index: 1;
+  position: relative;
 }
 
 #div-search {
@@ -54,7 +52,7 @@ li .nav-link {
 }
 
 #element-acerca-nosotros {
-  white-space: nowrap;
+  white-space: wrap;
   color: #000;
 }
 
@@ -125,4 +123,48 @@ li .nav-link {
 
 .container-fluid {
   color: #f8f8f6;
+}
+
+/* Agregando elementos al footer */
+#footer {
+  margin-top: auto; /* Asegura que el footer quede en la parte inferior */
+  width: 100%;
+  background-color: #ffff;
+  text-align: center;
+  padding: 10px 0; /* Espaciado interno del footer */
+}
+
+.footerMenu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.footerMenu-elem {
+  list-style: none;
+}
+
+.footerMenu-icon {
+  color: #000000;
+  font-size: 15px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 5px;
+  opacity: 0.75;
+  transition: 0.4s;
+}
+
+.footerMenu-icon:hover {
+  transform: translateY(-10px);
+}
+
+.footerText {
+  color: #000000;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
