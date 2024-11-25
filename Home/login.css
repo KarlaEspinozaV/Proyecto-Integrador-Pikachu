@@ -1,0 +1,121 @@
+
+
+.modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display:  flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal-container-login{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid; 
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: var(--transform);
+    transition: var(--transition);
+    
+}
+
+
+.modal_img{
+    width: 90%;
+    max-width: 90px;
+}
+
+
+.modal_title{
+    margin-bottom: 10px;
+    font-size: 20px;
+    
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+}
+
+
+.modal_close{
+    text-decoration: none;
+    color: #fff;
+    background-color: #f27250;
+    padding: 1em 3em;
+    border: 1px solid white;
+    border-radius: 6px;;
+    display: inline-block;
+    font-weight: 300;
+    transition: backgroud-color .3s;
+    transition:  opasity .6s;
+    text-decoration: none;
+}
+
+.modal_close:hover{
+    color: #fff;
+}
+
+.modal_paragraph{
+    margin-bottom: 10px;
+}
+
+
+.email_form{
+    width: 100%;
+}
+
+.password_form{
+    width: 100%;
+}
+
+.nombre_form{
+    width: 100%;
+  
+}
+
+#loginForm{
+   background-color: #fff;
+   width: 90%;
+   height: 100%;
+   border: 3px solid black;
+   border-radius: 3dvh;
+   gap: 2dvh;
+   padding: 2%;
+   display: inline-grid !important;
+
+}
+
+#inputs_form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#password_login{
+    width: 99%;
+}
+
+#email{
+    width: 99%;
+}
+
+#name{
+    width: 99%;
+}
