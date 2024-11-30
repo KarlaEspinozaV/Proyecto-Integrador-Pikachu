@@ -5,7 +5,14 @@ main {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: #fdf270;
+  gap: 15px;
+  background: rgb(253, 242, 112);
+  background: linear-gradient(
+    77deg,
+    rgba(253, 242, 112, 1) 25%,
+    rgba(120, 136, 198, 1) 69%,
+    rgba(39, 48, 84, 1) 100%
+  );
 }
 
 @media (max-width: 768px) {
@@ -49,7 +56,7 @@ main {
 }
 
 .privacy-policy h2 {
-  color: #ff8c42;
+  color: #d3832c;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -61,7 +68,7 @@ main {
 
 .privacy-policy {
   h1 {
-    background-color: #ff8c42;
+    background-color: #d3832c;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -86,7 +93,7 @@ main {
     content: "\f058"; /* Font Awesome check icon */
     font-family: "Font Awesome 5 Free";
     margin-right: 8px;
-    color: #ff8c42;
+    color: #d3832c;
     font-weight: 900;
   }
 }

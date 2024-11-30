@@ -5,35 +5,15 @@ main {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: #fdf270;
+  gap: 15px;
+  background: rgb(253, 242, 112);
+  background: linear-gradient(
+    77deg,
+    rgba(253, 242, 112, 1) 25%,
+    rgba(120, 136, 198, 1) 69%,
+    rgba(39, 48, 84, 1) 100%
+  );
 }
-
-@media (max-width: 768px) {
-  .container-home {
-    flex-direction: column; /* Cambia la disposición a columna */
-    justify-content: center;
-    align-items: center; /* Alinea los elementos al centro */
-    max-width: 90%; /* Ajusta el ancho */
-  }
-
-  .img-home {
-    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
-    max-width: 300px; /* Limita el tamaño de la imagen en móviles */
-    order: 1; /* Asegura que la imagen aparezca primero */
-  }
-
-  .text-home {
-    width: 100%; /* Ajusta el ancho del texto */
-    max-width: 250px; /* Limita el ancho del texto en móviles */
-    height: auto; /* Permite que el contenedor de texto ajuste su altura */
-    margin-top: 20px; /* Añade un espacio entre la imagen y el texto */
-    order: 2; /* Asegura que el texto aparezca después de la imagen */
-    top: -55px;
-    left: auto;
-    position: relative; /* Cambia a posición estática para evitar superposiciones */
-  }
-}
-
 /* Sección Términos y Condiciones */
 .terms-and-conditions {
   max-width: 800px;
@@ -46,7 +26,7 @@ main {
 }
 
 .terms-and-conditions h1 {
-  background-color: #007bff;
+  background-color: #d3832c;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -60,7 +40,7 @@ main {
 }
 
 .terms-and-conditions h2 {
-  color: #007bff;
+  color: #d3832c;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -86,7 +66,7 @@ main {
   content: "\f00c"; /* Font Awesome checkmark icon */
   font-family: "Font Awesome 5 Free";
   margin-right: 8px;
-  color: #007bff;
+  color: #d3832c;
   font-weight: 900;
 }
 
@@ -101,7 +81,7 @@ main {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #d3832c;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -109,5 +89,5 @@ main {
 }
 
 .terms-and-conditions .contact-btn:hover {
-  background-color: #0056b3;
+  background-color: #d3832c;
 }
