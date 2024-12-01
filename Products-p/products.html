@@ -10,11 +10,11 @@
   <link rel="stylesheet" href="./style_header.css">
   <link rel="stylesheet" href="./filter.css">
   <link rel="stylesheet" href="./styles_modal.css">
-  <script defer src="./js/main.js"></script>
   <script defer type="module" src="./js/itemsController.js"></script>
   <script defer type="module" src="./js/addElement.js"></script>
   <script defer type="module" src="./card-products.js"></script>
   <script defer type="module" src="./js/main.js"></script>
+  <script defer type="module" src="./js/filter.js"></script>
   <title>Products</title>
 </head>
 
@@ -175,7 +175,7 @@
                 <input type="file" class="form-control" id="productImage" accept="image/*" required>
               </div>
               <button id="addProductButton" type="button" class="btn btn-primary w-100">Subir Producto</button>
-              <a href="#" class="btn modal_close w-100 mt-2">Cerrar</a>
+              <a href="#" id= "cancel_edition" class="btn modal_close w-100 mt-2">Cerrar</a>
             </form>
           </div>
         </div>
@@ -194,10 +194,8 @@
         </div>
       </section>
 
-
+      <!-- Aquí empieza el filtro -->
       <div id="filtro-container">
-
-
         <div id="filtro-icon-container">
           <svg xmlns="http://www.w3.org/2000/svg" width="39" height="25" fill="currentColor" class="bi bi-filter"
             viewBox="0 0 16 16">
@@ -212,6 +210,10 @@
 
         <div class="dropdowns-containers" id="dropdown-container">
 
+          <button id="button0" class="btn btn-secondary" type="button">
+              Limpiar
+            </button>
+
           <div class="dropdown">
             <button id="button1" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -221,16 +223,16 @@
               <li><button class="dropdown-item" type="button"> <input type="checkbox" name="first-checkbox-price"
                     id="price-range-1"> $50 - $100</button></li>
               <li><button class="dropdown-item" type="button"> <input type="checkbox" name="second-checkbox-price"
-                    id="price-range-2"> $100 - $250</button></li>
+                    id="price-range-2"> $101 - $250</button></li>
               <li><button class="dropdown-item" type="button"> <input type="checkbox" name="third-checkbox-price"
-                    id="price-range-3"> $250 - $500</button></li>
+                    id="price-range-3"> $251 - $500</button></li>
               <li><button class="dropdown-item" type="button"> <input type="checkbox" name="fourth-checkbox-price"
                     id="price-range-4"> Mayor a $500</button></li>
             </ul>
           </div>
 
-
-          <div class="dropdown">
+          <!-- Categoría y diponibilidad -->
+          <!-- <div class="dropdown">
             <button id="button2" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Categoria
@@ -259,12 +261,13 @@
               <li><button class="dropdown-item" type="button"> <input type="checkbox" name="first-disponibility"
                     id="disponibility3"> +10 </button></li>
             </ul>
-          </div>
+          </div> -->
 
 
         </div>
 
       </div>
+      <!-- Section para cards  -->
       <section id="productos-container"></section>
     </main>
 
