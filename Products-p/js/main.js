@@ -1,4 +1,5 @@
 import { confirmDelete } from "./editElement.js";
+import { cancelEdit } from "./editElement.js";
 
 const openModal = document.querySelector('.add-product');
 const modal = document.querySelector('.modal');
@@ -12,6 +13,7 @@ openModal.addEventListener('click', (e)=>{
 closeModal.addEventListener('click', (e)=>{
   e.preventDefault();
   modal.classList.remove('modal--show');
+  cancelEdit();
 });
 
 const modalEliminar = document.getElementById("modal-eliminar");
