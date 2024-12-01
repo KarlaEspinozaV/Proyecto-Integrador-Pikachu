@@ -19,7 +19,6 @@ async function fetchAndDisplayProducts() {
 				product.url,
 			);
 		});
-		console.log(productController);
 
 		crearTarjetasArticulosInicio(productController.getItems);
 	} catch (error) {

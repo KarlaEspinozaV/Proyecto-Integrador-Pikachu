@@ -5,7 +5,7 @@ const productName = document.getElementById('productName');
 const description = document.getElementById('productDescription');
 const price = document.getElementById('productPrice');
 const image = document.getElementById('productImage');
-console.log(image);
+
 
 document.getElementById('addProductButton').addEventListener('click', async () => {
   const imageAsBase64Url = await encodeImageAsUrl(image.files[0]);
