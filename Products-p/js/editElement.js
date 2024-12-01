@@ -15,6 +15,17 @@ function editarProducto(producto) {
   productController.setItemEdit = producto;
 }
 
+function cancelEdit() {
+  const productName = document.getElementById('productName');
+  const description = document.getElementById('productDescription');
+  const price = document.getElementById('productPrice');
+  // Limpiar el formulario después de agregar el producto
+  productName.value = '';
+  description.value = '';
+  price.value = '';
+  image.value = '';
+}
+
 function eliminarProducto(producto) {
   const modalEliminar = document.getElementById('modal-eliminar');
   modalEliminar.classList.add('modal--show');
@@ -32,4 +43,4 @@ function confirmDelete() {
   }
 }
 
-export { editarProducto, eliminarProducto , confirmDelete};
+export { editarProducto, eliminarProducto , confirmDelete, cancelEdit};
