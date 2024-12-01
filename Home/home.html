@@ -14,6 +14,7 @@
     <script  defer src="./js/index.js"></script>
     <script  defer src="./js/login.js"></script>
     <script  defer src="./js/singup.js"></script>
+    <script defer src="./js/search.js"></script>
     <title>Document</title>
 </head>
 
@@ -72,9 +73,10 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
                     <!-- * -->
-                    <form id='form-search' class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?"
+                    <form class="d-flex" role="search">
+                        <input id="search-input" class="form-control me-2" type="search" placeholder="¿Qué estás buscando?"
                             aria-label="Search">
+                        <ul id="search-result-list"></ul>
                         <button class="btn btn-outline-success" type="submit">
                             <svg id='search-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
