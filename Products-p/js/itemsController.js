@@ -3,13 +3,13 @@ class ProductsController {
   items;
   current_Id;
 
-  constructor(currentId = 0){
+  constructor(currentId = 0) {
     this.itemEdit = undefined;
     this.items = [];
     this.current_Id = currentId;
   }
 
-  set setItems(nuevoItems){
+  set setItems(nuevoItems) {
     this.items = nuevoItems;
   }
 
@@ -17,7 +17,7 @@ class ProductsController {
     return this.items;
   }
 
-  set setItemEdit(itemEdit){
+  set setItemEdit(itemEdit) {
     this.itemEdit = itemEdit;
   }
 
@@ -25,23 +25,23 @@ class ProductsController {
     return this.itemEdit;
   }
 
-  async addItem(name, description, price, img){
+  async addItem(name, description, price, img) {
     const item = {
-      id: ++ this.current_Id,
+      id: ++this.current_Id,
       name,
       description,
       price,
       img,
-      createdAt: new Date()
+      createdAt: new Date(),
     };
 
     this.items.push(item);
     const stringItems = JSON.stringify(this.items);
-    localStorage.setItem("Items",stringItems);
+    localStorage.setItem("Items", stringItems);
   }
 
   updateItem(id, newData) {
-    const index = this.items.findIndex(item => item.id === id);
+    const index = this.items.findIndex((item) => item.id === id);
     const item = this.items[index];
     console.log(item);
     if (item) {
@@ -55,19 +55,19 @@ class ProductsController {
       this.items[index] = item;
 
       const stringItems = JSON.stringify(this.items);
-      localStorage.setItem("Items",stringItems);
+      localStorage.setItem("Items", stringItems);
       return true;
     }
     return false;
   }
 
   deleteItem(id) {
-    const index = this.items.findIndex(item => item.id === id);
+    const index = this.items.findIndex((item) => item.id === id);
     if (index !== -1) {
       this.items.splice(index, 1);
 
-    const stringItems = JSON.stringify(this.items);
-    localStorage.setItem("Items",stringItems);
+      const stringItems = JSON.stringify(this.items);
+      localStorage.setItem("Items", stringItems);
       return true;
     }
     return false;
@@ -77,17 +77,17 @@ class ProductsController {
     this.items = [];
 
     const stringItems = JSON.stringify(this.items);
-    localStorage.setItem("Items",stringItems);
+    localStorage.setItem("Items", stringItems);
   }
 
   loadItemsFromLocalStorage() {
-    const storageItems = localStorage.getItem("Items")
+    const storageItems = localStorage.getItem("Items");
     if (storageItems) {
-        const items = JSON.parse(storageItems)
-        for (var i = 0, size = items.length; i < size; i++) {
-            const item = items[i];
-            this.items.push(item);
-        }
+      const items = JSON.parse(storageItems);
+      for (var i = 0, size = items.length; i < size; i++) {
+        const item = items[i];
+        this.items.push(item);
+      }
     }
   }
 }
