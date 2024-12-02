@@ -21,9 +21,6 @@ function crearTarjetasArticulosInicio() {
         <h5>$${producto.precio}</h5>
         <p>${producto.description}</p>
         <div>
-            <p> talla: ${producto.talla} </p>
-        </div>
-        <div>
             <button id = "button-tarjeta">-</button>
             <span class="cantidad">${producto.cantidad}</span>
             <button id = "button-tarjeta">+</button>
