@@ -1,66 +1,74 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    border: 0;
-} */
-
-
-#filtro-container{
-    margin: 5px;
-    border: 2px solid black;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    width: 99%;
-    height: 50px;
-    position: static;
+/* Container principal del filtro */
+#filtro-container {
+  margin: 10px auto; /* Centrado horizontal */
+  border: 2px solid #333; /* Color de borde más neutro */
+  border-radius: 8px; /* Borde más suave */
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Centrado vertical del contenido */
+  justify-content: space-between; /* Separación entre elementos */
+  width: 95%; /* Espaciado horizontal interno */
+  height: 60px; /* Altura más cómoda */
+  background-color: #f9f9f9; /* Fondo claro para contraste */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mayor profundidad */
 }
 
-
-#dropdown-container{
-    justify-content: space-evenly;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    margin: 1%;
+/* Dropdown container */
+#dropdown-container {
+  display: flex;
+  justify-content: space-evenly; /* Espaciado uniforme entre elementos */
+  align-items: center; /* Centrado vertical */
+  width: 100%; /* Adaptable al tamaño del contenedor */
+  gap: 15px; /* Espaciado entre elementos */
 }
 
-
-
-button{
-    /* width: 350px; */
-    /* min-width: 10%; */
+/* Botones dentro del filtro */
+button {
+  padding: 8px 16px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de fuente legible */
+  color: #fff; /* Texto blanco */
+  background-color: #007bff; /* Color principal */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cursor de mano */
+  transition: background-color 0.3s, transform 0.2s; /* Animación suave */
 }
 
+button:hover {
+  background-color: #0056b3; /* Cambio de color en hover */
+  transform: scale(1.05); /* Ligero aumento en hover */
+}
 
-/* Media query for tablet and smaller screens */
+button:active {
+  background-color: #004085; /* Color más oscuro al presionar */
+  transform: scale(0.95); /* Reducción al presionar */
+}
+
+/* Media query para pantallas pequeñas */
 @media (max-width: 1024px) {
-	#filtro-container {
-    margin: 5px;
-    border: 2px solid black;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    width: 98%;
-    height: 50px;
-    position: static;
+  #filtro-container {
+    flex-direction: column; /* Cambiar a columna */
+    height: auto; /* Altura adaptable */
+    padding: 10px; /* Espaciado interno */
+  }
 
+  #dropdown-container {
+    flex-direction: column; /* Elementos en columna */
+    gap: 10px; /* Más espacio entre elementos */
+    width: 100%; /* Ancho completo */
+  }
 
-	}
-    #filtro-icon-container{
-        flex-direction: column;
-        display: contents;
-        width: auto;
-    }
-    #dropdown-container{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
+  button {
+    width: 100%; /* Botones ocupan todo el ancho */
+    font-size: 16px; /* Fuente más grande en dispositivos pequeños */
+  }
+}
 
-    }
-    button{
-        width: auto;
-
-    }
-
+/* Estilo adicional para íconos (si es necesario) */
+#filtro-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: auto;
 }
