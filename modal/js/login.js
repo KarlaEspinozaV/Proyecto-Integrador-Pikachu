@@ -94,7 +94,7 @@
 //       <div class="alert alert-primary mt-2" role="alert">
 //         <p>¡Felicidades  ${dataObject.nombreForm} ${dataObject.apellido} ya eres parte de Pawfect Family!</p>
 //         <p>Tú correo de registro es:  ${dataObject.email}</p>
-        
+
 //       </div>
 //   `;
 //   regForm.insertAdjacentHTML("afterend", alert);
@@ -180,15 +180,47 @@
 // })
 
 const loginForm = document.querySelector("#loginForm");
+async function fetchUsers() {
+  const url = `http://localhost:8080/api/users/email/${email}`;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data
+  } catch (error) {
+    console.error("Error:", error); // Manejo de errores
 
-loginForm.addEventListener("submit", (e) => {
+  }
+}
+
+
+loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
+  //backend
+  //fetch(url)
+        // .then(response => response.json())
+        // .then(data => {
+        //     userInfo.innerHTML = `
+        //         <h3>Información del usuario:</h3>
+        //         <p>Nombre de usuario: ${data.username}</p>
+        //         <p>Correo electrónico: ${data.email}</p>
+        //         <p>Contraseña: ${data.password}</p>
+        //     `
+        // })
+        // .catch(error => {
+        //     userInfo.innerHTML = `
+        //         Usuario no encontrado
+        //     `
+        //     console.error(error)
+        // })
+  const users = await fetchUsers();
 
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-  
+
+
+  console.log(users);
+  JSON.parse(localStorage.getItem("users")) || [];
+
   // Buscar al usuario con el email y la contraseña
   const validUser = users.find(user => user.email === email && user.password === password);
 
