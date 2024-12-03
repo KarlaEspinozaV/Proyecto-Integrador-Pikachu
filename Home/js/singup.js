@@ -4,12 +4,12 @@ singupForm.addEventListener("submit", (e) =>{
     const name = document.querySelector("#name").value
     const email = document.querySelector("#email").value
     const password = document.querySelector("#password_singup").value
-    const phone = "";
+    //const phone = null;
 
     const user = {
       name: name,
       email: email,
-      phone : phone,
+      //phone : phone,
       password : password
     }
 
