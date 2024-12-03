@@ -67,7 +67,7 @@ main {
 	box-shadow: #273054;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
 	#container-home {
 		flex-direction: column-reverse; /* Cambia la disposición a columna */
 		justify-content: center;
@@ -98,10 +98,11 @@ main {
 	}
 
 	.img-home {
-		width: 85%;
+		width: 75%;
 		/* Asegura que el contenedor ocupe todo el ancho */
 		text-align: center; /* Centra el contenido */
-		margin: 0 auto;
+		margin: 0 auto; /* Centra el contenedor */
+		left: 0; /
 	}
 
 	.img-home img {
