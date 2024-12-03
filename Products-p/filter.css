@@ -52,18 +52,30 @@
 @media (max-width: 1024px) {
 	#filtro-container {
 		flex-direction: column; /* Cambiar a columna */
-		height: auto; /* Altura adaptable */
-		padding: 10px; /* Espaciado interno */
+		height: auto;
+		width: 50%;
+	}
+
+	#myinput {
+		width: 90%;
+		margin-top: 10px;
+		text-align: center;
 	}
 
 	#dropdown-container {
 		flex-direction: column; /* Elementos en columna */
-		gap: 10px; /* Más espacio entre elementos */
-		width: 100%; /* Ancho completo */
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	#agregar_producto {
+		width: 30%;
+		margin-bottom: 30px;
 	}
 
 	button {
 		width: 100%; /* Botones ocupan todo el ancho */
-		font-size: 16px; /* Fuente más grande en dispositivos pequeños */
+		font-size: 16px;
+		margin-bottom: 10px; /* Fuente más grande en dispositivos pequeños */
 	}
 }
