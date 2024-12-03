@@ -1,94 +1,98 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: #273054;
-}
-
-h2 {
-  font-size: 1.75rem;
-}
-
-p {
-  line-height: 1.6;
-}
-
-img {
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  gap: 15px;
-  background: rgb(253, 242, 112);
-  background: linear-gradient(
-    77deg,
-    rgba(253, 242, 112, 1) 25%,
-    rgba(120, 136, 198, 1) 69%,
-    rgba(39, 48, 84, 1) 100%
-  );
-}
-
-/* Tarjetas del Equipo */
-.card {
-  border: none;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #ffffff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-img-top {
-  max-height: 300px;
-  object-fit: cover;
-}
-
-.card-title {
-  color: #273054;
-  font-size: 1.7rem;
-  margin-bottom: 0.5rem;
-}
-
-.card-text {
-  color: #555;
-}
-
-/* Sección de Equipo */
-.my-5 {
-  margin: 3rem 0;
-}
-
-.text-primary {
-  color: #273054;
-}
-
-.text-center {
-  text-align: center;
-}
-
-/* Ajustes de Responsividad */
-@media (max-width: 576px) {
-  .row {
-    flex-direction: column;
-    gap: 2rem;
+	font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+	color: #333;
+  }
+  
+  h1 {
+	font-size: 2.5rem;
+	color: #273054;
+  }
+  
+  h2 {
+	font-size: 1.75rem;
+  }
+  
+  p {
+	line-height: 1.6;
+	
+	justify-content: center;
+	color: black;
+  }
+  
+  img {
+	border: 1px solid #ddd;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
+  main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	gap: 15px;
+	background: rgb(253, 242, 112);
+	background: linear-gradient(
+	  77deg,
+	  rgba(253, 242, 112, 1) 25%,
+	  rgba(120, 136, 198, 1) 69%,
+	  rgba(39, 48, 84, 1) 100%
+	);
+  }
+  
+  /* Tarjetas del Equipo */
   .card {
-    margin: 0 auto;
+	border: none;
+	border-radius: 12px;
+	overflow: hidden;
+	background: #ffffff;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-}
+  
+  .card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img-top {
+	max-height: 300px;
+	object-fit: cover;
+  }
+  
+  .card-title {
+	color: #273054;
+	font-size: 1.7rem;
+	margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+	color: #555;
+  }
+  
+  /* Sección de Equipo */
+  .my-5 {
+	margin: 3rem 0;
+  }
+  
+  .text-primary {
+	color: #273054;
+  }
+  
+  .text-center {
+	text-align: center;
+  }
+  
+  /* Ajustes de Responsividad */
+  @media (max-width: 576px) {
+	.row {
+	  flex-direction: column;
+	  gap: 2rem;
+	}
+  
+	.card {
+	  margin: 0 auto;
+	}
+  }

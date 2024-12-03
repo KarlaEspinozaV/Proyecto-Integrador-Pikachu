@@ -20,6 +20,7 @@ li .nav-link {
 	font-family: "Roboto", sans-serif;
 	background-color: white;
 	position: relative;
+
 }
 
 #div-search {
@@ -38,19 +39,20 @@ li .nav-link {
 	height: 30px;
 	width: 30px;
 	color: #000;
-	margin-right: 5px;
+  margin-right: 5px;
 }
 #home-logo {
 	height: 30px;
 	width: 30px;
 	color: black;
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 #cart-logo {
 	height: 30px;
 	width: 30px;
 	color: black;
+  margin-right: 5px;
 }
 
 #element-acerca-nosotros {
@@ -75,26 +77,26 @@ li .nav-link {
 
 #element-acerca-nosotros:hover {
 	background-color: #f47c98;
-	color: white;
+  color: white;
 	transition: background-color 0.5s, color 0.5s;
 	border-radius: 0.5rem;
 }
 
 #comunidad:hover {
 	background-color: #f47c98;
-	color: white;
+  color: white;
 	transition: background-color 0.5s, color 0.5s;
 	border-radius: 0.5rem;
 }
 
 #perros-dropdown:hover {
-	background-color: white !important;
+  background-color: white!important;
 	color: #f47c98 !important;
 	transition: background-color 0.5s, color 0.5s !important;
 }
 
 #productos:hover,
-#productos:focus {
+#productos:focus{
 	background-color: #f47c98;
 	color: white;
 	transition: background-color 0.5s, color 0.5s;
@@ -189,6 +191,6 @@ li .nav-link {
 	font-size: 15px;
 }
 
-.nav-link {
-	border-radius: 0.5rem;
+.nav-link{
+  border-radius: 0.5rem;
 }

@@ -17,55 +17,112 @@ main {
 
 #form_container {
 	display: flex;
-	justify-content: space-evenly;
 	align-items: center;
-	width: 65%;
+	width: 75%;
+	height: 600px;
 	box-shadow: rgb(39, 48, 84) 0px 5px 15px;
 	box-shadow: #273054;
 	background-color: #7888c6;
-	padding: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
 	border-radius: 20px;
+	overflow: auto;
 }
 
 .left-box {
-	margin-right: 350px;
+	border: 12px solid #fffcaf;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+#img-contactus {
+	width: 320px;
+	border-radius: 20px;
 }
 
 .text-center {
 	margin: 35px;
-	color: white;
-	font-size: 30px;
+	margin-top: 0;
+	color: aliceblue;
 }
 
-/* Media query for tablet and smaller screens */
-@media (max-width: 1024px) {
-	#form_container {
-		flex-direction: column;
-	}
-	#registration-info {
-		flex-direction: column;
-	}
-}
+.right-box {
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	height: 550px;
+	padding-top: 15px;
+	margin: 35px;
 
-.container-img {
-	border-radius: 5%;
-}
-#input-registro {
-	gap: 10rem;
-	color: white;
-	width: 100%;
-}
-
-.form-control {
-	border: solid 12px red;
 	border-radius: 15px;
-	background-color: #7888c6;
+	background-color: #f47c98a3;
+	position: relative;
 }
 
-#validationCustomEmail::placeholder {
-	color: rgba(255, 255, 255, 0.2); /* Color blanco con opacidad */
+#input-registro {
+	width: 80%;
 }
 
-#registro-boton {
-	margin: 10px;
+.input-contacto01 {
+	margin-top: 15px;
+	color: beige;
+}
+
+.form-space {
+	align-self: center;
+	width: 350px;
+	border-radius: 5px;
+	border: none;
+	background-color: white;
+	box-shadow: rgb(186, 140, 247) 0px 2px 10px;
+}
+
+#contacto-boton {
+	background-color: #273054;
+	margin: 30px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+@media (max-width: 1300px) {
+	main {
+		flex-direction: column;
+		align-items: center; /* Asegura que los elementos se centren */
+		gap: 20px; /* Espaciado más consistente */
+		padding: 20px; /* Evita que el contenido se pegue a los bordes */
+	}
+
+	#form_container {
+		width: 90%; /* Mejora el ajuste en pantallas más pequeñas */
+		max-width: 600px; /* Limita el ancho para una mejor experiencia */
+		height: auto; /* Deja que el contenedor ajuste su altura */
+		padding: 40px; /* Espaciado interno balanceado */
+		gap: 20px;
+		flex-direction: column; /* Asegura el orden vertical */
+		box-sizing: border-box; /* Incluye padding en las dimensiones */
+	}
+
+	#img-contactus {
+		width: 100%; /* Asegura que se ajuste al contenedor */
+		max-width: 350px; /* Evita que se agrande demasiado */
+		margin: 0 auto; /* Centra la imagen horizontalmente */
+		display: block; /* Elimina posibles espacios extra */
+	}
+
+	.left-box {
+		width: 100%; /* Se adapta al tamaño del contenedor */
+		margin: 0 auto; /* Centra horizontalmente */
+		display: flex;
+		justify-content: center; /* Centra el contenido dentro */
+		align-items: center; /* Alinea verticalmente */
+		padding: 20px; /* Espaciado interno */
+	}
+
+	.right-box {
+		width: 100%;
+		margin: 15px 0; /* Espaciado más natural */
+		padding: 20px; /* Espaciado interno ajustado */
+	}
 }

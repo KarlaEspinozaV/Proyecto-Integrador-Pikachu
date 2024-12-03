@@ -53,12 +53,13 @@ main {
 }
 
 .img-home {
-	width: 50%; /* Ajusta el ancho según sea necesario */
+	width: 90%;
+	height: ; /* Ajusta el ancho según sea necesario */
 	text-align: right; /* Opcional, alinea la imagen al lado derecho */
 }
 .img-home img {
-	max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
-	height: auto;
+	width: 500px; /* Asegura que la imagen no se salga del contenedor */
+	height: 550px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -67,7 +68,7 @@ main {
 	box-shadow: #273054;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
 	#container-home {
 		flex-direction: column-reverse; /* Cambia la disposición a columna */
 		justify-content: center;
@@ -77,11 +78,10 @@ main {
 	}
 
 	.text-home {
-		width: 70%; /* Adapta el ancho al tamaño de pantalla */
+		width: 90%; /* Adapta el ancho al tamaño de pantalla */
 		height: auto; /* Permite que ajuste su altura automáticamente */
 		margin: 0 auto; /* Centra el contenedor */
-		left: 0; /* Elimina el desplazamiento a la izquierda */
-		bottom: 30px;
+		text-align: center; /* Asegura que el texto esté centrado */
 	}
 
 	.carousel {
@@ -98,15 +98,15 @@ main {
 	}
 
 	.img-home {
-		width: 85%;
-		/* Asegura que el contenedor ocupe todo el ancho */
+		width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
 		text-align: center; /* Centra el contenido */
-		margin: 0 auto;
+		margin: 0 auto; /* Centra el contenedor */
+		margin-left: 10px;
 	}
 
 	.img-home img {
-		width: auto; /* Permite que la imagen ajuste su tamaño */
-		height: auto;
+		width: 100%; /* Ajusta la imagen al contenedor */
+		height: auto; /* Mantiene la proporción */
 		max-width: 100%; /* Evita desbordar del contenedor */
 		border-radius: 10%; /* Mantiene el borde redondeado */
 		box-shadow: rgb(39, 48, 84) 0px 5px 10px;
