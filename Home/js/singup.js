@@ -1,4 +1,4 @@
-const singupForm = document.querySelector("#loginForm")
+const singupForm = document.querySelector("#singupForm")
 singupForm.addEventListener("submit", (e) =>{
     e.preventDefault()
     const name = document.querySelector("#name").value

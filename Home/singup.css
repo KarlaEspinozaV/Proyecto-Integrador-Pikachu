@@ -87,7 +87,7 @@
   
 }
 
-#loginForm{
+#singupForm{
    width: 90%;
    height: 100%;
    gap: 2dvh;
@@ -115,7 +115,7 @@
 
 .submit-form{
     border-radius: 10px;
-  
+    width: 100%;
 }
 
 

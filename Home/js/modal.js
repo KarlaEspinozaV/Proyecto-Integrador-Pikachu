@@ -7,8 +7,6 @@ const singupToLogin = document.getElementById("ingresaLink")
 const loginToSingup = document.getElementById("registrarseLink")
 
 
-
-
 openModal.addEventListener("click", (e) => {
     e.preventDefault();
     modal.classList.add('modal--show');
@@ -20,15 +18,9 @@ closeModal.addEventListener("click", (e) => {
     modal.classList.remove('modal--show')
 })
 
-
-closeModalLogin.addEventListener("click", (e) => {
-    e.preventDefault();
-    modalLogin.classList.remove('modal--show')
-})
-
-
 singupToLogin.addEventListener("click", (e) => {
     e.preventDefault();
+    
     modal.classList.remove('modal--show')
     modalLogin.classList.add('modal--show')
 })
@@ -39,4 +31,9 @@ loginToSingup.addEventListener("click", (e) => {
     modal.classList.add('modal--show')
 })
 
+
+closeModalLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    modalLogin.classList.remove('modal--show')
+})
 
