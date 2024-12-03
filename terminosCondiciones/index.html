@@ -27,7 +27,7 @@
             </button>
             <!-- ** -->
             <div class="d-flex align-items-left">
-              <a href="index.html">
+              <a href="../Home/home.html">
 
 
                     <img id='logo-header'src="./assets/images/Logo_paw.png" alt="Descripción">
@@ -51,7 +51,7 @@
                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
             </svg>
 
-            <a href="index.html"> <svg id='home-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            <a href="../Home/home.html"> <svg id='home-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                 fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                 <path
                   d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
@@ -66,6 +66,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
           <!-- * -->
+          <!-- Search
           <form id='form-search' class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">
@@ -75,28 +76,27 @@
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l -3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
               </svg>
             </button>
-          </form>
+          </form> -->
 
 
           <!-- * -->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle custom-hover" href="#" role="button" data-bs-toggle="dropdown"
+              <a id = "productos" class="nav-link dropdown-toggle custom-hover" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Productos
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../Products-p/index.html">Perros</a></li>
-                <li><a class="dropdown-item" href="../Products-p/index.html">Gatos</a></li>
-                <li><a class="dropdown-item" href="../Products-p/index.html">Otros</a></li>
+                <li><a id ='perros-dropdown' class="dropdown-item" href="../Products-p/products.html">Perros</a></li>
               </ul>
 
             <li class="nav-item custom-hover"></li>
-            <a id='element-acerca-nosotros' class="nav-link" href="../About-US/index.html">Acerca de nosotros</a>
+            <a id='element-acerca-nosotros' class="nav-link" href="../About-US/index.html">Acerca de
+              nosotros</a>
 
             <li class="nav-item custom-hover">
-              <a class="nav-link" href="../ContactUs/index.html">Comunidad</a>
+              <a id = 'comunidad' class="nav-link" href="../ContactUs/index.html">Comunidad</a>
             </li>
             </li>
           </ul>
@@ -121,7 +121,7 @@
 
           </a>
 
-          <a href="../Home/index.html">
+          <a href="../Home/home.html">
               <svg id='home-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                   <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
                 </svg>
@@ -136,12 +136,12 @@
       <h1><i class="fas fa-file-contract"></i> Términos y Condiciones</h1>
       <p>Bienvenido a Pawfect. Al acceder y utilizar nuestro sitio web, aceptas los siguientes términos y condiciones. Si no estás de acuerdo con ellos, por favor, no utilices nuestro sitio.</p>
     </article>
-    
+
     <article>
       <h2><i class="fas fa-shopping-cart"></i> 1. Uso del sitio</h2>
       <p>El uso de nuestro sitio web está limitado a personas mayores de edad que puedan realizar contratos legalmente vinculantes según las leyes aplicables. No debes usar este sitio para ningún propósito ilegal o no autorizado.</p>
     </article>
-    
+
     <article>
       <h2><i class="fas fa-box"></i> 2. Pedidos y pagos</h2>
       <ul>
@@ -150,7 +150,7 @@
         <li>Los precios están sujetos a cambios sin previo aviso, pero los pedidos confirmados mantendrán el precio acordado al momento de la compra.</li>
       </ul>
     </article>
-    
+
     <article>
       <h2><i class="fas fa-truck"></i> 3. Envíos y devoluciones</h2>
       <ul>
@@ -158,22 +158,22 @@
         <li>Las devoluciones son aceptadas solo para productos defectuosos o incorrectos. Consulta nuestra política de devoluciones para más detalles.</li>
       </ul>
     </article>
-    
+
     <article>
       <h2><i class="fas fa-lock"></i> 4. Propiedad intelectual</h2>
       <p>Todo el contenido de este sitio, incluyendo textos, imágenes, logotipos y diseño, está protegido por derechos de autor. No está permitido copiar, reproducir o distribuir ningún contenido sin autorización previa.</p>
     </article>
-    
+
     <article>
       <h2><i class="fas fa-user-shield"></i> 5. Limitación de responsabilidad</h2>
       <p>No seremos responsables por daños directos, indirectos, incidentales o consecuentes que resulten del uso o incapacidad de uso de este sitio web.</p>
     </article>
-    
+
     <article>
       <h2><i class="fas fa-sync"></i> 6. Modificaciones</h2>
       <p>Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Las actualizaciones se publicarán en esta página y se aplicarán inmediatamente.</p>
     </article>
-    
+
     <article>
       <h2><i class="fas fa-envelope"></i> 7. Contacto</h2>
       <p>Si tienes preguntas sobre estos términos y condiciones, contáctanos en:</p>
@@ -184,8 +184,8 @@
     </article>
   </section>
 </main>
-  
-  
+
+
   <!-- Aquí incia el footer -->
   <footer id="footer">
     <ul class="footerMenu">

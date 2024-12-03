@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="singup.css">
     <link rel="stylesheet" href="login.css">
     <script  defer src="./js/modal.js"></script>
-    <script  defer src="./js/index.js"></script>
     <script  defer src="./js/login.js"></script>
     <script  defer src="./js/singup.js"></script>
     <script defer src="./js/search.js"></script>
@@ -89,7 +88,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle custom-hover" href="#" role="button"
+                            <a id = "productos" class="nav-link dropdown-toggle custom-hover" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </a>
@@ -123,7 +122,6 @@
                     </a>
 
                     <button id="button-modal" type="button" class="btn btn-primary btn-lg" style="display: inline-block; position: relative; height: 40px; width: 40px; padding: 0; background-color: transparent; border-color: transparent;">
-                        <!-- SVG dentro del botón -->
                         <svg id="user-logo" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; " >
                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
                         </svg>
@@ -184,12 +182,12 @@
 
     <!-- Cógido de modal sing up -->
     <div id="modal-form-singup">
-        <section class="modal" >
+        <section class="modal" id="modal-1" >
             <div class="modal-container-register">
                 <img src="./assets/images/Logo_Paw.png" class="modal_img" alt="imagen de login ">
                 <h2 class="modal_title">Registro</h2>
 
-            <form id="loginForm">
+            <form id="singupForm">
 
                 <div id="inputs_form">
                     <div class="nombre_form">
@@ -219,8 +217,8 @@
     <!-- Fin código modal de singup -->
 
     <!-- Inicio código de login -->
-    <!-- <div id="modal-form-login">
-        <section class="modal">
+     <div id="modal-form-login">
+        <section class="modal" id="modal-2">
             <div class="modal-container-login">
                 <img src="./assets/images/Logo_Paw.png" class="modal_img" alt="imagen de login ">
                 <h2 class="modal_title">Ingresar</h2>
@@ -229,18 +227,18 @@
                     <div id="inputs_form">
                         <label>Email</label>
                         <input type="email" placeholder="..." id="email" required autofocus>
-
+                        
                         <label >Contraseña</label>
                         <input type="password" placeholder="..." id="password_login" required>
                     </div>
-                    <input type="submit" value="Ingresar">
-
+                    <input type="submit" value="Ingresar" class="submit-form">
+    
                     <p>No tienes cuenta? <a href="#"  id="registrarseLink" >Registrate</a></p>
                 </form>
-                <a href="#" class="modal_close">Salir</a>
+                <a href="#" class="modal_close" id="modal_close2">Salir</a>            
             </div>
         </section>
-    </div> -->
+    </div>
     <!-- Fin código de login -->
 
 
