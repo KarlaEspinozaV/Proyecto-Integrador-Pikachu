@@ -78,17 +78,8 @@
           <!-- Custom hover es el elemento creado css que le da la animación a nuestra barra pawfect -->
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
-            <!-- * -->
-            <form id='form-search' class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">
-                <svg id='search-logo' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-search" viewBox="0 0 16 16">
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l -3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-              </button>
-            </form>
+            <!-- *  aqui estaba que estas buscando pero se eliminó -->
+
 
 
             <!-- * -->
@@ -149,7 +140,7 @@
     <main>
       <!-- Añadiendo filtro -->
       <h1 class="titulo-productos">Nuestros Productos</h1>
-      <a class="btn btn-outline-primary add-product" href="#" role="button">Agregar producto</a>
+      <a class="btn btn-outline-primary add-product" id="agregar_producto" role="button">Agregar producto</a>
 
       <!-- ---------- Aquí comienza el modal -->
       <section class="modal">
@@ -197,31 +188,15 @@
 
       <!-- Aquí empieza el filtro -->
       <div id="filtro-container">
-        <div id="filtro-icon-container">
-          <svg xmlns="http://www.w3.org/2000/svg" width="39" height="25" fill="currentColor" class="bi bi-filter"
-            viewBox="0 0 16 16">
-            <path
-              d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
-          </svg>
-
-          <p>Filtrar</p>
-
-        </div>
-
-
         <div class="dropdowns-containers" id="dropdown-container">
-
-          <input type="text" class="form-control mt-3 mx-auto" id="myinput" placeholder="¿Ya sabes qué estás buscando?"
-            style="width: 20%;">
-
-          <button id="button0" class="btn btn-secondary" type="button">
-            Limpiar
-          </button>
-
+          <input type="text" class="form-control" id="myinput" placeholder="Hola, ¿qué estás buscando?">
           <div class="dropdown">
-            <button id="button1" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            <button id="button1" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Precio
+            </button>
+            <button id="button0" class="btn" type="button">
+              Limpiar
             </button>
             <ul class="dropdown-menu">
               <li><button class="dropdown-item" type="button"> <input type="checkbox" name="first-checkbox-price"
