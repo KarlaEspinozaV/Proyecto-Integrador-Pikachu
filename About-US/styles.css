@@ -5,24 +5,29 @@ body {
   }
   
   h1 {
-	font-size: 2.5rem;
-	color: #273054;
+	font-family: "Arial", sans-serif; /* Fuente limpia y moderna */
+	font-size: 3rem; /* Tamaño grande para destacar */
+	color: #118ab2; /* Un color oscuro y elegante */
+	text-align: center; /* Centrado para mayor simetría */
+	padding: 20px; /* Espaciado alrededor del texto */
+	text-shadow: 2px 2px 4px #ffffff, -2px -2px 4px #ffffff, 2px -2px 4px #ffffff,
+	  -2px 2px 4px #ffffff; /* Borde blanco */
+	transition: all 0.3s ease; /* Efecto suave para interacción */
   }
   
   h2 {
-	font-size: 1.75rem;
+	font-size: 2rem;
+	color: white;
   }
   
   p {
 	line-height: 1.6;
-	
 	justify-content: center;
 	color: black;
   }
   
-  img {
-	border: 1px solid #ddd;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .text-g{
+	font-size: 1.5rem;
   }
 
   main {
@@ -42,13 +47,18 @@ body {
 	  rgba(39, 48, 84, 1) 100%
 	);
   }
+
+  .cardb-title{
+	color: white;
+	font-size: 3rem; /* Tamaño grande para destacar */
+  }
   
   /* Tarjetas del Equipo */
   .card {
 	border: none;
 	border-radius: 12px;
 	overflow: hidden;
-	background: #ffffff;
+	background: #f099ad;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
@@ -63,13 +73,18 @@ body {
   }
   
   .card-title {
-	color: #273054;
-	font-size: 1.7rem;
+	color: white;
+	
 	margin-bottom: 0.5rem;
+  }
+
+  h5 { 
+	font-size: 1.7rem;
   }
   
   .card-text {
-	color: #555;
+	color: black;
+	font-size: 1.2rem;
   }
   
   /* Sección de Equipo */
@@ -77,9 +92,7 @@ body {
 	margin: 3rem 0;
   }
   
-  .text-primary {
-	color: #273054;
-  }
+
   
   .text-center {
 	text-align: center;
@@ -95,4 +108,9 @@ body {
 	.card {
 	  margin: 0 auto;
 	}
+  }
+
+  .text-p {
+	font-size: 1.70rem;
+	color: black;
   }

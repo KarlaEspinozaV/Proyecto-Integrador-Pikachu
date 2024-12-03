@@ -17,9 +17,9 @@ main {
 
 #form_container {
 	display: flex;
-	justify-content: space-evenly;
 	align-items: center;
 	width: 75%;
+	height: 600px;
 	box-shadow: rgb(39, 48, 84) 0px 5px 15px;
 	box-shadow: #273054;
 	background-color: #7888c6;
@@ -30,30 +30,38 @@ main {
 }
 
 .left-box {
-	margin-right: 100px;
 	border: 12px solid #fffcaf;
 	padding: 30px;
 	border-radius: 20px;
 }
 
 #img-contactus {
-	width: 520px;
+	width: 320px;
 	border-radius: 20px;
 }
 
 .text-center {
 	margin: 35px;
+	margin-top: 0;
 	color: aliceblue;
 }
 
 .right-box {
+	display: inline-block;
 	align-items: center;
 	justify-content: center;
-	width: 40%;
-	padding-left: 35px;
+	width: 50%;
+	height: 550px;
+	padding-top: 15px;
 	margin: 35px;
+
 	border-radius: 15px;
 	background-color: #f47c98a3;
+	position: relative;
+}
+
+#input-registro {
+	width: 80%;
 }
 
 .input-contacto01 {
@@ -62,6 +70,7 @@ main {
 }
 
 .form-space {
+	align-self: center;
 	width: 350px;
 	border-radius: 5px;
 	border: none;
@@ -77,35 +86,43 @@ main {
 	padding-right: 25px;
 }
 
-@media (max-width: 1724px) {
+@media (max-width: 1300px) {
 	main {
 		flex-direction: column;
+		align-items: center; /* Asegura que los elementos se centren */
+		gap: 20px; /* Espaciado más consistente */
+		padding: 20px; /* Evita que el contenido se pegue a los bordes */
 	}
 
 	#form_container {
-		padding: 10px;
-		width: 50%;
-		height: 650px;
-		padding: 60px;
-		gap: 15px;
-		flex-direction: column;
+		width: 90%; /* Mejora el ajuste en pantallas más pequeñas */
+		max-width: 600px; /* Limita el ancho para una mejor experiencia */
+		height: auto; /* Deja que el contenedor ajuste su altura */
+		padding: 40px; /* Espaciado interno balanceado */
+		gap: 20px;
+		flex-direction: column; /* Asegura el orden vertical */
+		box-sizing: border-box; /* Incluye padding en las dimensiones */
 	}
 
 	#img-contactus {
-		max-width: 350px;
-		align-content: center;
+		width: 100%; /* Asegura que se ajuste al contenedor */
+		max-width: 350px; /* Evita que se agrande demasiado */
+		margin: 0 auto; /* Centra la imagen horizontalmente */
+		display: block; /* Elimina posibles espacios extra */
 	}
 
 	.left-box {
-		width: auto;
-		justify-content: center;
-		align-items: center;
-		margin-left: 100px;
+		width: 100%; /* Se adapta al tamaño del contenedor */
+		margin: 0 auto; /* Centra horizontalmente */
+		display: flex;
+		justify-content: center; /* Centra el contenido dentro */
+		align-items: center; /* Alinea verticalmente */
+		padding: 20px; /* Espaciado interno */
 	}
 
 	.right-box {
 		width: 100%;
-		margin: 10px 0;
-		padding: 15px;
+		margin: 15px 0; /* Espaciado más natural */
+		padding: 20px; /* Espaciado interno ajustado */
 	}
 }
