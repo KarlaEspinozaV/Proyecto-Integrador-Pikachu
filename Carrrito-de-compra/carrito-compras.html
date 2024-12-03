@@ -137,8 +137,47 @@
     </nav>
   </header>
   <main>
+    <!-- Aquí empieza el filtro -->
+    <div id="filtro-container">
+      <div class="dropdowns-containers" id="dropdown-container">
+        <input type="text" class="form-control" id="myinput" placeholder="Hola, ¿qué estás buscando?" />
+        <div class="dropdown">
+          <button id="button1" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Precio
+          </button>
+          <button id="button0" class="btn" type="button">
+            Limpiar
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button class="dropdown-item" type="button">
+                <input type="checkbox" name="first-checkbox-price" id="price-range-1" /> $50 - $100
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                <input type="checkbox" name="second-checkbox-price" id="price-range-2" /> $101 - $250
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                <input type="checkbox" name="third-checkbox-price" id="price-range-3" /> $251 - $500
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                <input type="checkbox" name="fourth-checkbox-price" id="price-range-4" /> Mayor a $500
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Aquí empieza el contenedor de productos -->
     <section id="productos-container"></section>
   </main>
+  
   <!-- ----- comienza footer ------ -->
   <footer id="footer">
     <ul class="footerMenu">
