@@ -4,7 +4,7 @@ body {
     rgba(253, 242, 112, 1) 25%,
     rgba(120, 136, 198, 1) 69%,
     rgba(39, 48, 84, 1) 100%
-  ) !important;
+  );
   /*padding-bottom: 15vh; */
   min-height: 100vh; /* Asegura que el body ocupe todo el alto de la pantalla */
   display: flex;
@@ -41,24 +41,27 @@ body {
 }
 
 #productos-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex !important;
+  flex-wrap: wrap !important;
   gap: 20px;
   justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* 1200px para pantallas grandes */
   margin: auto;
-  padding-top: 70px;
-	padding-bottom: 60px;
+  /* width: 300px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .tarjeta-producto {
-  width: 400px;
+  /* width: 400px; */
   text-align: center;
   background-color: #f47c98;
   padding: 20px;
   box-shadow: 0 0 10px #273054;
   transition: 200ms;
-  /*width: calc(33.33% - 20px); /* 3 tarjetas por fila con espacio entre ellas */
-  /*min-width: 250px; /* Asegura que no se vuelvan demasiado pequeñas */
+  width: calc(33.33% - 20px); /* 3 tarjetas por fila con espacio entre ellas */
+  min-width: 250px; /* Asegura que no se vuelvan demasiado pequeñas */
 }
 
 .tarjeta-producto:hover {
@@ -68,22 +71,40 @@ body {
 
 .tarjeta-producto img {
   width: 100%;
-  /* aspect-ratio: 1; */ /*Por si las imagenes tuveran distintos tamaños*/
+  /* aspect-ratio: 1; */ /*Por si las imagenes tuvieran distintos tamaños*/
 }
 
-h3 {
-  margin: 6px 0;
+.tarjeta-producto h3 {
+  margin: 10px 0;
+  padding: 5px;
+  font-weight: 10rem;
+  color: #f3dfdf;
+  background-color: #7888c6;
+  border-radius: 15px;
+}
+
+.tarjeta-producto h5 {
+  padding: 15px;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px #ffffff, -2px -2px 4px #ffffff, 2px -2px 4px #ffffff,
+    -2px 2px 4px #ffffff; /* Borde blanco */
+  color: #7888c6;
+  transform: scale(1.05);
+}
+
+p {
+  font-size: 24px;
+  color: #273054;
 }
 
 #button-tarjeta {
   background-color: #273054;
+  font-size: 20px;
   color: white;
-  padding: 3px 10px;
+  padding: 5px 10px;
   border: unset;
   border-radius: 5px;
 }
-
-
 .escondido {
   display: none;
 }
