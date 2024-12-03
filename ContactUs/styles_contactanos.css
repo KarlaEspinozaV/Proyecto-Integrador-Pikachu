@@ -76,3 +76,36 @@ main {
 	padding-left: 25px;
 	padding-right: 25px;
 }
+
+@media (max-width: 1724px) {
+	main {
+		flex-direction: column;
+	}
+
+	#form_container {
+		padding: 10px;
+		width: 50%;
+		height: 650px;
+		padding: 60px;
+		gap: 15px;
+		flex-direction: column;
+	}
+
+	#img-contactus {
+		max-width: 350px;
+		align-content: center;
+	}
+
+	.left-box {
+		width: auto;
+		justify-content: center;
+		align-items: center;
+		margin-left: 100px;
+	}
+
+	.right-box {
+		width: 100%;
+		margin: 10px 0;
+		padding: 15px;
+	}
+}

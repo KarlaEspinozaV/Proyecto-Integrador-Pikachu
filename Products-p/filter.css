@@ -1,6 +1,7 @@
 /* Container principal del filtro */
 #filtro-container {
 	margin: 10px auto; /* Centrado horizontal */
+	margin-top: 30px;
 	border-radius: 8px; /* Borde más suave */
 	display: flex;
 	flex-direction: row;
@@ -24,6 +25,7 @@
 	width: 40%;
 	font-size: 20px;
 	color: white;
+	text-align: center;
 }
 
 #myinput::placeholder {
