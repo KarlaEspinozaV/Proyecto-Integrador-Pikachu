@@ -145,84 +145,64 @@
             <!-- ---- imagen de la izquierda ---- -->
             <div class="left-box">
                 <div class="featured-image">
-                    <img src="./assets/contact-us.jpg" alt="perrita jugando">
+                    <img id="img-contactus" src="./assets/contact-us.jpg" alt="perrita jugando">
                 </div>
             </div>
             <!-- ----- input form ----- -->
 
             <div class="right-box" id="registro-container">
-                <h4 class="text-center">¡Regístrate!</h4>
-
-
+                <h4 class="text-center"> Queremos escuchar tu opinión
+                    <br>¡Contactanos!
+                    </br>
+                </h4>
                 <form class="mx-auto input-form" id="input-registro">
                     <!-- ----- nombre ----- -->
-                    <div id="registro-nombre" class="col-md-5">
-                        <label id="label-form" for="validationDefaultUsernumber" class="form-label">Nombre(s)</label>
+                    <div id="registro-nombre" class="input-contacto01">
+                        <label id="label-form" for="validationDefaultUsernumber" class="form-label">Nombre
+                            Completo</label>
                         <div class="input-group">
 
-                            <input type="text" class="form-control" id="validationDefaultUsernumber"
+                            <input type="text" class="form-space" id="validationDefaultUsernumber"
                                 aria-describedby="inputGroupPrepend2" required>
                         </div>
                     </div>
                     <!-- -------- apellido ------- -->
-                    <div id="registro-nombre" class="col-md-5">
-                        <label id="label-form" for="validationDefaultUsernumber" class="form-label">Apellido(s)</label>
-                        <div class="input-group">
-
-                            <input type="text" class="form-control" id="validationDefaultUsernumber"
-                                aria-describedby="inputGroupPrepend2" required>
-                        </div>
-                    </div>
 
 
                     <!-- ------ numero de telefono ------- -->
-                    <div id="registro-num" class="col-md-5">
+                    <div id="registro-num" class="input-contacto01">
                         <label id="label-form" for="validationDefaultUsernumber" class="form-label">Número de
                             teléfono</label>
                         <div class="input-group">
-                            <span class="input-group-text" id="num-lada" style="color: white;">+52</span>
-                            <input type="text" class="form-control" id="validationDefaultUsernumber"
+                            <input type="text" class="form-space" id="validationDefaultUsernumber"
                                 aria-describedby="inputGroupPrepend2" required>
                         </div>
                     </div>
-
-                    <!-- ----------- correo electrónico ---- -->
-                    <div id="registro-correo" class="col-md-5">
+                    <!-- --- corro electrónico -->
+                    <div class="input-contacto01">
                         <label for="validationCustomEmail" class="form-label" id="label-correo">Correo
                             electrónico</label>
                         <div class="input-group has-validation">
 
-                            <input class="form-control" id="validationCustomEmail" aria-describedby="inputGroupPrepend"
-                                placeholder="nombre@ejemplo.com" required pattern="[a-zA-Z0-9._%+-]+@ejemplo\.com">
+                            <input type="email" class="form-space" id="validationCustomEmail"
+                                aria-describedby="inputGroupPrepend" placeholder="nombre@ejemplo.com" required
+                                pattern="[a-zA-Z0-9._%+-]+@ejemplo\.com">
                             <div class="invalid-feedback">
                                 Por favor ingresa un correo electrónico válido en el formato nombre@ejemplo.com.
                             </div>
                         </div>
-                    </div>
-                    <!-- ------- contraseña ------  -->
-
-                    <div id="registro-contrasena" class="col-md-5">
-                        <label id="label-form" for="validationDefaultUsernumber" class="form-label">Contraseña</label>
-                        <div class="input-group">
-
-                            <input type="text" class="form-control" id="validationDefaultUsernumber"
-                                aria-describedby="inputGroupPrepend2" required>
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="">
-
-                        <label for="mensaje" class="form-label" id="label-mensaje">Mensaje</label>
-                        <div class="input-group">
-                            <textarea class="form-control" id="mensaje" rows="4"
-                                placeholder="Escribe tu mensaje aquí..." required></textarea>
-                            <div class="invalid-feedback">
-                                Por favor escribe tu mensaje.
+                        <div class="input-contacto01">
+                            <label for="mensaje" class="form-label" id="label-mensaje">Mensaje</label>
+                            <div class="input-group">
+                                <textarea class="form-space" id="mensaje" rows="4"
+                                    placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor escribe tu mensaje.
+                                </div>
                             </div>
                         </div>
-                    </div> -->
-                    <button id="registro-boton" type="submit" class="btn btn-primary">Registrase</button>
+                    </div>
+                    <button id="contacto-boton" type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
 
