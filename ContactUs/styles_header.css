@@ -38,6 +38,7 @@ li .nav-link {
 	height: 30px;
 	width: 30px;
 	color: #000;
+	margin-right: 5px;
 }
 #home-logo {
 	height: 30px;
@@ -86,15 +87,14 @@ li .nav-link {
 	border-radius: 0.5rem;
 }
 
-.dropdown-item:hover {
+#perros-dropdown:hover {
 	background-color: white !important;
-	color: #f47c98;
-	transition: background-color 0.5s, color 0.5s;
+	color: #f47c98 !important;
+	transition: background-color 0.5s, color 0.5s !important;
 }
 
-.custom-hover:hover,
-.custom-hover:focus,
-.custom-hover.active {
+#productos:hover,
+#productos:focus {
 	background-color: #f47c98;
 	color: white;
 	transition: background-color 0.5s, color 0.5s;

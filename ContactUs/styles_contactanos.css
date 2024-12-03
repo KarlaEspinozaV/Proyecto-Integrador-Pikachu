@@ -31,13 +31,6 @@ main {
 	margin-right: 350px;
 }
 
-img {
-	width: 520px;
-	border-radius: 20px;
-	box-shadow: rgb(39, 48, 84) 0px 5px 15px;
-	box-shadow: #273054;
-}
-
 .text-center {
 	margin: 35px;
 	color: white;
