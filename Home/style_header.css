@@ -93,9 +93,8 @@ li .nav-link {
 	transition: background-color 0.5s, color 0.5s;
 }
 
-.custom-hover:hover,
-.custom-hover:focus,
-.custom-hover.active{
+#productos:hover,
+#productos:focus{
 	background-color: #f47c98;
 	color: white;
 	transition: background-color 0.5s, color 0.5s;
