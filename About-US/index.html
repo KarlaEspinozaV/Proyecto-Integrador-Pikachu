@@ -72,7 +72,7 @@
                   <li><a id ='perros-dropdown' class="dropdown-item" href="../Products-p/products.html">Perros</a></li>
                 </ul>
               <li class="nav-item custom-hover">
-                    <a id='element-acerca-nosotros' class="nav-link" href="../About-US/index.html">Acerca denosotros</a>
+                    <a id='element-acerca-nosotros' class="nav-link" href="../About-US/index.html">Acerca de nosotros</a>
                 </li>
               <li class="nav-item custom-hover">
                     <a id = 'comunidad' class="nav-link" href="../ContactUs/index.html">Cóntactanos</a>
@@ -114,39 +114,69 @@
       </header>
         <main>
             
-                <div class="text-center my-4">
-                    <h1>Quienes somos</h1>
-                    <p>Somos Pawfect. Una página que esta 100% dedicada al cuidado de los peluditos.</p>
-                    <p>Nuestros peluditos son más que mascotas. Son nuestros mejores amigos, nuestros protectores y miembros de nuestra familia. Tienen peculiaridades y un carácter inigualables, y tienen necesidades que les son propias. Por eso trabajamos con tenaz determinación día tras día para proporcionarles los cuidados que necesitan para vivir.</p>
-                    <p>Queremos ser... <strong>“Tu mejor amigo”</strong></p>
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                  <div class="col-md-8">
+                    <div class="text-center my-4">
+                      <h1>¿Quiénes somos?</h1>
+                      <p class="text-g">Somos Pawfect. Una página que está 100% dedicada al cuidado de los peluditos.</p>
+                      <p class="text-g">
+                        Nuestros peluditos son más que mascotas. Son nuestros mejores amigos, nuestros protectores y miembros de nuestra familia. Tienen peculiaridades y un carácter inigualables, y tienen necesidades que les son propias. Por eso trabajamos con tenaz determinación día tras día para proporcionarles los cuidados que necesitan para vivir.
+                      </p>
+                      <p class="text-g">Queremos ser... <strong>“Tu mejor amigo”</strong></p>
+                    </div>
+                  </div>
                 </div>
+              </div>
             
             
-                <div class="container">
-                    <div class="row align-items-center mb-5">
-                        <div class="col-md-6">
-                            <img src="./Assets/Images/imagen1.jpg" alt="Mujer en tienda de mascotas" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-6">
-                            <h2 class="text">Nuestros servicios</h2>
-                            <p style="color: white;">Propocionamos accesorios innovadores y de alta calidad para mascotas, que mejoren su bienestar y fortalecer los vínculos entre las personas y sus mascotas promoviendo un estilo de vida amigable y sostenible.</p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="row align-items-center">
-                    <div class="col-md-6 order-md-2">
-                        <img src="./Assets/Images/imagen2.jpg" alt="Asesorando en tienda de mascotas" class="img-fluid rounded">
-                    </div>
-                    <div class="col-md-6 order-md-1">
-                        <h2 class="text">Nuestra identidad</h2>
-                        <p>Queremos convertirnos en la marca líder del mercado de accesorios para mascotas reconocida por su compromiso con el bienestar animal, expandiendo nuestra presencia a nivel nacional.</p>
-                    </div>
-                </div>
+<!-- Bloque 1 -->
+<div class="container mt-4">
+    <div class="card border-0 shadow">
+      <div class="row g-0 align-items-center">
+        <!-- Imagen -->
+        <div class="col-md-6">
+          <img src="./Assets/Images/imagen1.jpg" class="img-fluid rounded-start" alt="Imagen de persona con mascotas">
+        </div>
+        <!-- Texto -->
+        <div class="col-md-6 d-flex align-items-center">
+          <div class="card-body">
+            <h2 class="card-title cardb-title">Nuestros servicios</h2>
+            <p class="card-text text-p">
+              Proporcionamos accesorios innovadores y de alta calidad para mascotas, que mejoren su bienestar y fortalezcan los vínculos entre las personas y sus mascotas promoviendo un estilo de vida amigable y sostenible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bloque 2 -->
+  <div class="container mt-4">
+    <div class="card border-0 shadow">
+      <div class="row g-0 align-items-center">
+        <!-- Imagen -->
+        <div class="col-md-6 order-md-2">
+          <img src="./Assets/Images/imagen2.jpg" alt="Asesorando en tienda de mascotas" class="img-fluid rounded-end">
+        </div>
+        <!-- Texto -->
+        <div class="col-md-6 order-md-1 d-flex align-items-center">
+          <div class="card-body">
+            <h2 class="card-title cardb-title">Nuestra identidad</h2>
+            <p class="card-text text-p">
+              Queremos convertirnos en la marca líder del mercado de accesorios para mascotas reconocida por su compromiso con el bienestar animal, expandiendo nuestra presencia a nivel nacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+                  
             
             <!--Sección del equipo-->
             <div class="container my-5">
-                <h2 class="text-center mb-4">Conoce a nuestro equipo</h2>
+                <h1 class="text-center mb-4">Conoce a nuestro equipo</h1>
                 <div class="row">
                     <div class="col-md-4 mb-4" *ngFor="let miembro de equipo">
                         <div class="card h-100 shadow-sm">
