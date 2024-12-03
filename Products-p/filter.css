@@ -42,11 +42,11 @@
 	cursor: pointer; /* Cursor de mano */
 	transition: background-color 0.3s, transform 0.2s; /* Animación suave */
 }
-.dropdown-menu {
+/* .dropdown-menu {
 	background-color: #7888c6;
 	font-size: 18px;
 	color: whitesmoke;
-}
+} */
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 1024px) {
