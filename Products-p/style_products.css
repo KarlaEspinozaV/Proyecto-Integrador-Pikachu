@@ -88,6 +88,7 @@ main {
 
 .tarjeta-producto {
   /* width: 400px; */
+  position: relative;
   text-align: center;
   background-color: #f47c98;
   padding: 20px;
@@ -97,6 +98,17 @@ main {
   min-width: 250px; /* Asegura que no se vuelvan demasiado pequeñas */
 }
 
+
+.info-button {
+  position: absolute;
+  bottom: 10%; /* 10% desde la parte inferior */
+  left: 50%; /* Centrado horizontal */
+  transform: translateX(-50%); /* Ajusta para que se centre completamente */
+  width: 200px; /* Ancho del hijo */
+  height: 100px; /* Altura del hijo */
+  background-color: coral;
+}
+
 .tarjeta-producto:hover {
   translate: 0 -10px;
   box-shadow: 0 10px 10px #273054;
@@ -104,7 +116,9 @@ main {
 
 .tarjeta-producto img {
   width: 100%;
-  /* aspect-ratio: 1; */ /*Por si las imagenes tuvieran distintos tamaños*/
+  display: flex;
+  text-align: center;
+  aspect-ratio: 1; /*Por si las imagenes tuvieran distintos tamaños*/
 }
 
 h3 {

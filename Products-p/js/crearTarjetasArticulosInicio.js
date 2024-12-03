@@ -11,8 +11,10 @@ function crearTarjetasArticulosInicio(productos) {
         <h3>${producto.name}</h3>
         <h5>$${producto.price}</h5>
         <p>${producto.description}</p>
+        <div id = "info-button">
         <button class = "button-tarjeta-productos" id="editar-${producto.id}" >Editar</button>
         <button class = "button-tarjeta-productos" id="eliminar-${producto.id}">Eliminar</button>
+        </div>
         `;
     contenedorTarjetas.appendChild(nuevoArticulo);
 
