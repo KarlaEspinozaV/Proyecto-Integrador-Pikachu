@@ -9,7 +9,7 @@ LoginForm.addEventListener('submit', (e) =>{
     if(!validUser){
         return alert('Usuario y/o contraseña incorrecta.')
     }
-    alert(`Bienvenido ${validerUser.name}`)
+    alert(`Bienvenido ${validUser.name}`)
     window.location.href = "index.hmtl"
 
 
