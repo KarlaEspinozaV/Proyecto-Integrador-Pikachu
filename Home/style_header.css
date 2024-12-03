@@ -20,6 +20,7 @@ li .nav-link {
 	font-family: "Roboto", sans-serif;
 	background-color: white;
 	position: relative;
+
 }
 
 #div-search {
@@ -67,17 +68,33 @@ li .nav-link {
 	flex-wrap: nowrap;
 }
 
-.icon-container svg {
+/* .icon-container svg {
 	margin-right: 10px;
-}
+} */
 
 #element-acerca-nosotros:hover {
 	background-color: #f47c98;
+  color: white;
 	transition: background-color 0.5s, color 0.5s;
 	border-radius: 0.5rem;
 }
 
-.custom-hover:hover {
+#comunidad:hover {
+	background-color: #f47c98;
+  color: white;
+	transition: background-color 0.5s, color 0.5s;
+	border-radius: 0.5rem;
+}
+
+.dropdown-item:hover {
+  background-color: white!important;
+	color: #f47c98;
+	transition: background-color 0.5s, color 0.5s;
+}
+
+.custom-hover:hover,
+.custom-hover:focus,
+.custom-hover.active{
 	background-color: #f47c98;
 	color: white;
 	transition: background-color 0.5s, color 0.5s;
@@ -170,4 +187,8 @@ li .nav-link {
 	margin-top: 5px;
 	margin-bottom: 15px;
 	font-size: 15px;
+}
+
+.nav-link{
+  border-radius: 0.5rem;
 }
