@@ -2,35 +2,39 @@ body {
 	font-family: Arial, sans-serif;
 	background-color: #f8f9fa;
 	color: #333;
-  }
-  
-  h1 {
+}
+
+h1 {
 	font-family: "Arial", sans-serif; /* Fuente limpia y moderna */
 	font-size: 3rem; /* Tamaño grande para destacar */
 	color: #118ab2; /* Un color oscuro y elegante */
 	text-align: center; /* Centrado para mayor simetría */
 	padding: 20px; /* Espaciado alrededor del texto */
+
 	text-shadow: 2px 2px 4px #ffffff, -2px -2px 4px #ffffff, 2px -2px 4px #ffffff,
-	  -2px 2px 4px #ffffff; /* Borde blanco */
+		-2px 2px 4px #ffffff; /* Borde blanco */
 	transition: all 0.3s ease; /* Efecto suave para interacción */
-  }
-  
-  h2 {
-	font-size: 2rem;
-	color: white;
-  }
-  
-  p {
+}
+
+.card-title {
+	font-size: 3rem;
+	color: hsl(228, 26%, 45%);
+	text-align: center;
+	text-shadow: 2px 2px 4px #ffffff, -2px -2px 4px #ffffff, 2px -2px 4px #ffffff,
+		-2px 2px 4px #ffffff;
+}
+
+p {
 	line-height: 1.6;
 	justify-content: center;
 	color: black;
-  }
-  
-  .text-g{
-	font-size: 1.5rem;
-  }
+}
 
-  main {
+.text-g {
+	font-size: 1.5rem;
+}
+
+main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -41,76 +45,88 @@ body {
 	gap: 15px;
 	background: rgb(253, 242, 112);
 	background: linear-gradient(
-	  77deg,
-	  rgba(253, 242, 112, 1) 25%,
-	  rgba(120, 136, 198, 1) 69%,
-	  rgba(39, 48, 84, 1) 100%
+		77deg,
+		rgba(253, 242, 112, 1) 25%,
+		rgba(120, 136, 198, 1) 69%,
+		rgba(39, 48, 84, 1) 100%
 	);
-  }
+}
 
-  .cardb-title{
-	color: white;
-	font-size: 3rem; /* Tamaño grande para destacar */
-  }
-  
-  /* Tarjetas del Equipo */
-  .card {
+/* Tarjetas del Equipo */
+.card {
 	border: none;
 	border-radius: 12px;
 	overflow: hidden;
 	background: #f099ad;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
 	transform: translateY(-10px);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-img-top {
+}
+
+.card-img-top {
 	max-height: 300px;
 	object-fit: cover;
-  }
-  
-  .card-title {
-	color: white;
-	
-	margin-bottom: 0.5rem;
-  }
+}
 
-  h5 { 
+h5 {
 	font-size: 1.7rem;
-  }
-  
-  .card-text {
-	color: black;
-	font-size: 1.2rem;
-  }
-  
-  /* Sección de Equipo */
-  .my-5 {
-	margin: 3rem 0;
-  }
-  
+}
 
-  
-  .text-center {
+.card-name {
+	color: #0e5e79;
 	text-align: center;
-  }
-  
-  /* Ajustes de Responsividad */
-  @media (max-width: 576px) {
-	.row {
-	  flex-direction: column;
-	  gap: 2rem;
-	}
-  
-	.card {
-	  margin: 0 auto;
-	}
-  }
+	font-size: 2rem;
+}
 
-  .text-p {
-	font-size: 1.70rem;
-	color: black;
-  }
+.card-description {
+	font-size: 1.5rem;
+	color: #0e5e79;
+	text-align: center;
+	background-color: #a4a8dd;
+	border: 5px solid #ddd9a4;
+	border-radius: 10px;
+}
+.card-text {
+	color: hsl(228, 26%, 45%);
+	font-size: 2rem;
+	text-align: center;
+}
+
+/* Sección de Equipo */
+.my-5 {
+	margin: 3rem 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* Ajustes de Responsividad */
+@media (max-width: 576px) {
+	.row {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.card {
+		margin: 0 auto;
+	}
+}
+
+.img-inicio {
+	max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+	height: auto; /* Mantiene las proporciones de la imagen */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra al contorno de la imagen */
+	border-radius: 8px; /* Opcional: para esquinas redondeadas */
+}
+
+#container-about {
+	margin-top: 90px;
+	margin-left: auto; /* Centra horizontalmente junto con margin-right */
+	margin-right: auto;
+	max-width: 70%; /* Mantiene el ancho máximo del contenedor */
+	padding: 0 20px; /* Opcional: añade espacio interno para mejor apariencia */
+}
