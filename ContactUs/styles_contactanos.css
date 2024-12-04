@@ -18,8 +18,9 @@ main {
 #form_container {
 	display: flex;
 	align-items: center;
-	width: 75%;
-	height: 600px;
+	justify-content: space-evenly;
+	width: 65%;
+	height: 700px;
 	box-shadow: rgb(39, 48, 84) 0px 5px 15px;
 	box-shadow: #273054;
 	background-color: #7888c6;

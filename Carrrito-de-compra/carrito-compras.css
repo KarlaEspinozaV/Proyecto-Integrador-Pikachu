@@ -21,6 +21,22 @@ main {
   flex-direction: column;
 }
 
+.titulo-productos {
+  font-family: "Arial", sans-serif; /* Fuente limpia y moderna */
+  font-size: 3rem; /* Tamaño grande para destacar */
+  color: #118ab2; /* Un color oscuro y elegante */
+  text-align: center; /* Centrado para mayor simetría */
+  padding: 20px; /* Espaciado alrededor del texto */
+  text-shadow: 2px 2px 4px #ffffff, -2px -2px 4px #ffffff, 2px -2px 4px #ffffff,
+    -2px 2px 4px #ffffff; /* Borde blanco */
+  transition: all 0.3s ease; /* Efecto suave para interacción */
+}
+
+.titulo-productos:hover {
+  color: #e090b1; /* Color atractivo al pasar el ratón */
+  transform: scale(1.05); /* Ligeramente más grande al hacer hover */
+}
+
 #all-icon-container > .cart-logo {
   text-decoration: none;
   color: black;
