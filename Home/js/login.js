@@ -2,12 +2,12 @@
 
 // loginForm.addEventListener("submit", (e) => {
 //   e.preventDefault();
-  
+
 //   const email = document.querySelector("#email").value;
 //   const password = document.querySelector("#password_login").value;
 
 //   const users = JSON.parse(localStorage.getItem("users")) || [];
-  
+
 //   // Buscar al usuario con el email y la contraseña
 //   const validUser = users.find(user => user.email === email && user.password === password);
 
@@ -22,7 +22,9 @@
 // });
 
 
-const loginForm = document.querySelector("#loginForm");
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.querySelector("#loginForm");
+  console.log(loginForm);
 async function fetchUser(email) {
 	const url = `http://localhost:8080/api/users/email/${email}`;
 	try {
@@ -39,9 +41,13 @@ async function fetchUser(email) {
 
 loginForm.addEventListener("submit", async (e) => {
 	e.preventDefault();
-	const email = document.querySelector("#email").value;
-	const password = document.querySelector("#password").value;
+	const email = document.querySelector("#email_login").value;
+  console.log("queryselector email", document.querySelector("#email_login"));
+	const password = document.querySelector("#password_login").value;
+  console.log("queryselector password", document.querySelector("#password_login"));
 	const user = await fetchUser(email);
+  console.log(email);
+  console.log(password);
 
 	console.log("llegue aca???", user);
 
@@ -57,5 +63,7 @@ loginForm.addEventListener("submit", async (e) => {
 	// Si el usuario es válido, muestra un mensaje y redirige
 	alert(`Bienvenido ${user.name}`);
 	//localStorage.setItem("login_succes", user.name);
-	//window.location.href = "cd.html";
+	window.location.href = "../Carrrito-de-compra/carrito-compras.html";
+});
+
 });

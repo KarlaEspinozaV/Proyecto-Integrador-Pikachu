@@ -95,11 +95,14 @@
 }
 
 #password_login,
-#email {
+#email,
+#email_login {
 	width: 100%;
 	border-radius: 10px;
 	border-color: rgb(rgb(179, 179, 179), green, blue);
 }
+
+
 
 #password_login:hover,
 #email:hover,
